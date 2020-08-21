@@ -4900,7 +4900,7 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns@^2.0.1, date-fns@^2.14.0, date-fns@^2.8.1:
+date-fns@^2.0.1, date-fns@^2.14.0, date-fns@^2.15.0, date-fns@^2.8.1:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.15.0.tgz#424de6b3778e4e69d3ff27046ec136af58ae5d5f"
   integrity sha512-ZCPzAMJZn3rNUvvQIMlXhDr4A+Ar07eLeGsGREoWU19a3Pqf5oYa+ccd+B3F6XVtQY6HANMFdOQ8A+ipFnvJdQ==
@@ -7053,7 +7053,7 @@ gatsby-transformer-sharp@^2.5.13:
     semver "^7.3.2"
     sharp "^0.25.1"
 
-gatsby@^2.24.47:
+gatsby@^2.24.8:
   version "2.24.47"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.24.47.tgz#44f50af6304111c0e5b7f9e9b777103dc2245a93"
   integrity sha512-+LLqdKqfVGpk0GyKMaWMnCqonVUyumg7a5fhODdZbDELmcNsQKtO5HShKs8ZbMm1PIIHewmU3uRlqRZygfAD6w==
