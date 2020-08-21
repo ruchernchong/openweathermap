@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `OpenWeatherMap`,
-    description: `OpenWeatherMap app for GovTech`
+    description: `OpenWeatherMap app for GovTech`,
+    author: `@ruchern.chong`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,4 +28,4 @@ module.exports = {
       }
     }
   ]
-}
+};
