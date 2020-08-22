@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherCard should render 1`] = `
+<div>
+  <div>
+    <h4>
+      Sun Jun 28 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+    </h4>
+    <img
+      alt=""
+      src="http://openweathermap.org/img/wn/10d@2x.png"
+    />
+    <div>
+      Description: 
+      light rain
+    </div>
+    <div>
+      High: 
+      30.7°C
+    </div>
+    <div>
+      Low: 
+      27.7°C
+    </div>
+    <button>
+      Click more...
+    </button>
+  </div>
+</div>
+`;

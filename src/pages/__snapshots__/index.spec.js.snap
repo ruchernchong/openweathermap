@@ -1,0 +1,454 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page: Index should render 1`] = `
+<div>
+  <header
+    style="background: rebeccapurple; margin-bottom: 1.45rem;"
+  >
+    <div
+      style="margin: 0px auto; max-width: 960px; padding: 1.45rem 1.0875rem;"
+    >
+      <h1
+        style="margin: 0px;"
+      >
+        <a
+          href="/"
+          style="color: white; text-decoration: none;"
+        >
+          OpenWeatherMap
+        </a>
+      </h1>
+    </div>
+  </header>
+  <div
+    style="margin: 0px auto; max-width: 960px; padding: 0px 1.0875rem 1.45rem;"
+  >
+    <main>
+      <mocked-seo
+        title="Home"
+      />
+      <h1>
+        Weather in 
+        Singapore
+      </h1>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div
+          style="width: 100%; height: 100%;"
+        >
+          <canvas
+            class="chartjs-render-monitor"
+            height="0"
+            style="display: block;"
+            width="0"
+          />
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Sun Jun 28 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            30.7°C
+          </div>
+          <div>
+            Low: 
+            27.7°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Mon Jun 29 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            30.0°C
+          </div>
+          <div>
+            Low: 
+            27.1°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Tue Jun 30 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            moderate rain
+          </div>
+          <div>
+            High: 
+            29.8°C
+          </div>
+          <div>
+            Low: 
+            27.0°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Wed Jul 01 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            30.0°C
+          </div>
+          <div>
+            Low: 
+            26.8°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Thu Jul 02 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            30.0°C
+          </div>
+          <div>
+            Low: 
+            27.2°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Fri Jul 03 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            29.9°C
+          </div>
+          <div>
+            Low: 
+            26.9°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Sat Jul 04 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            moderate rain
+          </div>
+          <div>
+            High: 
+            29.9°C
+          </div>
+          <div>
+            Low: 
+            27.1°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Sun Jul 05 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            moderate rain
+          </div>
+          <div>
+            High: 
+            30.3°C
+          </div>
+          <div>
+            Low: 
+            26.9°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Mon Jul 06 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            30.2°C
+          </div>
+          <div>
+            Low: 
+            26.8°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Tue Jul 07 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+          />
+          <div>
+            Description: 
+            broken clouds
+          </div>
+          <div>
+            High: 
+            30.4°C
+          </div>
+          <div>
+            Low: 
+            26.9°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Wed Jul 08 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            30.8°C
+          </div>
+          <div>
+            Low: 
+            27.2°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Thu Jul 09 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            light rain
+          </div>
+          <div>
+            High: 
+            29.8°C
+          </div>
+          <div>
+            Low: 
+            26.9°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Fri Jul 10 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            moderate rain
+          </div>
+          <div>
+            High: 
+            30.0°C
+          </div>
+          <div>
+            Low: 
+            26.9°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+      <div
+        style="margin-bottom: 64px;"
+      >
+        <div>
+          <h4>
+            Sat Jul 11 2020 13:00:00 GMT+0800 (Singapore Standard Time)
+          </h4>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <div>
+            Description: 
+            heavy intensity rain
+          </div>
+          <div>
+            High: 
+            28.7°C
+          </div>
+          <div>
+            Low: 
+            26.3°C
+          </div>
+          <button>
+            Click more...
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      © 
+      2020
+      , Built with
+       
+      <a
+        href="https://www.gatsbyjs.org"
+      >
+        Gatsby
+      </a>
+    </footer>
+  </div>
+</div>
+`;
