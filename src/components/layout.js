@@ -1,7 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
+import "normalize.css";
 
 import Header from "./Header/Header";
+
 import "./layout.css";
 
 const Layout = ({ children }) => {
