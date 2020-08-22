@@ -1,9 +1,10 @@
 import convertUnixToDatetime from "./convertUnixToDatetime";
 
 describe("convertUnixToDatetime", () => {
-  test("should return readable date and time for each timestamp", () => {
-    expect(convertUnixToDatetime(1598025600)).toBe(
-      "Sat Aug 22 2020 00:00:00 GMT+0800 (Singapore Standard Time)"
+  test("should return type of Date", () => {
+    expect(convertUnixToDatetime(1598025600)).toBeInstanceOf(Date);
+    expect(convertUnixToDatetime(1598025600)).toStrictEqual(
+      new Date("2020-08-21T16:00:00.000Z")
     );
   });
 });

@@ -4,10 +4,8 @@ import { fromUnixTime } from "date-fns";
  * Convert the timestamp to readable date and time
  *
  * @param {number} timestamp - Unix timestamp
- * @returns {string}
+ * @returns {Date}
  */
-const convertUnixToDatetime = timestamp => {
-  return fromUnixTime(timestamp).toString();
-};
+const convertUnixToDatetime = timestamp => fromUnixTime(timestamp);
 
 export default convertUnixToDatetime;
