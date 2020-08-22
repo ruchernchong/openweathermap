@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { format, fromUnixTime } from "date-fns";
+import { format } from "date-fns";
 import { colours } from "../theme";
 
 import ChartComponent from "../components/ChartComponent";
@@ -22,7 +22,7 @@ export const IndexPage = () => {
   const forecastDays = list.slice(0, 7);
 
   const labels = forecastDays.map(({ dt }) =>
-    format(fromUnixTime(dt), "(EEE) dd MMM")
+    format(convertUnixToDatetime(dt), "(EEE) dd MMM")
   );
 
   forecastDays.forEach(({ temp }) => {
