@@ -62,7 +62,7 @@ export const IndexPage = () => {
           labels={labels}
           title={{
             display: true,
-            text: `Welcome to ${city.name}`
+            text: `Weather forecast in ${city.name}`
           }}
         />
       </div>
