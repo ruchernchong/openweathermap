@@ -12,9 +12,9 @@ import {
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 
-import { formatDate, formatTime } from "../../helpers/formatTimestamp";
-import formatTemperature from "../../helpers/formatTemperature";
 import formatDecimal from "../../helpers/formatDecimal";
+import formatTemperature from "../../helpers/formatTemperature";
+import { formatDate, formatTime } from "../../helpers/formatTimestamp";
 
 const theme = createMuiTheme();
 

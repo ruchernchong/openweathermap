@@ -24,6 +24,7 @@ module.exports = {
     `gatsby-plugin-no-sourcemaps`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
