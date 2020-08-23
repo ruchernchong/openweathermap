@@ -1,9 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { IndexPage } from "./index";
+import Layout from "./Layout";
 
-import { useStaticQuery } from "../../__mocks__/gatsby";
-import mockDataJson from "../../__mocks__/graph-data-json.json";
+import { useStaticQuery } from "../../../__mocks__/gatsby";
 
 const data = {
   site: {
@@ -13,18 +12,16 @@ const data = {
   }
 };
 
-const mockData = {
-  ...mockDataJson,
-  ...data
-};
-
-describe("Page: Index", () => {
+describe("Layout", () => {
   beforeEach(() => {
     useStaticQuery.mockImplementation(() => data);
   });
 
   test("should render", () => {
-    const { container } = render(<IndexPage data={mockData} />);
+    const { container, getByText } = render(
+      <Layout data={data}>Content</Layout>
+    );
     expect(container).toMatchSnapshot();
+    expect(getByText("Content")).toBeVisible();
   });
 });

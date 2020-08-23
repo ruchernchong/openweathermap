@@ -22,8 +22,7 @@ describe("WeatherCard", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test("should render", () => {
-    const onClick = jest.fn();
+  test("should show additional contents when the accordion summary is clicked", () => {
     const { getAllByText, queryAllByText } = render(
       <WeatherCard
         dt={dt}
@@ -32,13 +31,12 @@ describe("WeatherCard", () => {
         sunset={sunset}
         temp={temp}
         weather={weather}
-        onClick={onClick}
       />
     );
 
-    expect(queryAllByText(/Humidity/)[0]).toBeFalsy();
+    expect(queryAllByText(/Humidity/)[0]).not.toBeVisible();
 
-    fireEvent.click(getAllByText(/Click more/)[0]);
-    expect(getAllByText(/Humidity/)[0]).toBeTruthy();
+    fireEvent.click(getAllByText(/\(Sun\) 28 Jun/)[0]);
+    expect(getAllByText(/Humidity/)[0]).toBeVisible();
   });
 });

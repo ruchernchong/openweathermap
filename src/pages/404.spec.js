@@ -1,9 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { IndexPage } from "./index";
+import NotFoundPage from "./404";
 
 import { useStaticQuery } from "../../__mocks__/gatsby";
-import mockDataJson from "../../__mocks__/graph-data-json.json";
 
 const data = {
   site: {
@@ -13,18 +12,16 @@ const data = {
   }
 };
 
-const mockData = {
-  ...mockDataJson,
-  ...data
-};
-
-describe("Page: Index", () => {
+describe("Page: NotFound", () => {
   beforeEach(() => {
     useStaticQuery.mockImplementation(() => data);
   });
 
   test("should render", () => {
-    const { container } = render(<IndexPage data={mockData} />);
+    const { container, getByText } = render(<NotFoundPage data={data} />);
     expect(container).toMatchSnapshot();
+    expect(
+      getByText(/You just hit a route that doesn't exist.../)
+    ).toBeVisible();
   });
 });
