@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colours } from "../../theme";
-
-import { author, version } from "../../../package.json";
+import { graphql, useStaticQuery } from "gatsby";
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -13,9 +12,22 @@ const StyledFooter = styled.footer`
 `;
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          author
+          version
+        }
+      }
+    }
+  `);
+
+  const { author, version } = data.site.siteMetadata;
+
   return (
     <StyledFooter>
-      {`©${new Date().getFullYear()} Developed by ${author}, v${version}`}
+      {`©${new Date().getFullYear()} Developed by ${author}, ${version}`}
     </StyledFooter>
   );
 };

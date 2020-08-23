@@ -35,7 +35,7 @@ exports[`Page: NotFound should render 1`] = `
   <footer
     class="sc-AxjAm gWcbgK"
   >
-    ©2020 Developed by Chong Ru Chern, v0.1.0
+    ©2020 Developed by John Doe, v1.0.0
   </footer>
 </div>
 `;

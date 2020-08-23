@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import "normalize.css";
 import { Container } from "@material-ui/core";
 
@@ -11,7 +11,7 @@ import "./layout.css";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    {
       site {
         siteMetadata {
           title
@@ -26,7 +26,10 @@ const Layout = ({ children }) => {
       <Container fixed>
         <main>{children}</main>
       </Container>
-      <Footer />
+      <Footer
+        author={data.site.siteMetadata.author}
+        version={data.site.siteMetadata.version}
+      />
     </Fragment>
   );
 };

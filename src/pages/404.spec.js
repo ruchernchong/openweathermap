@@ -7,7 +7,9 @@ import { useStaticQuery } from "../../__mocks__/gatsby";
 const data = {
   site: {
     siteMetadata: {
-      title: "OpenWeatherMap"
+      author: "John Doe",
+      title: "OpenWeatherMap",
+      version: `v1.0.0`
     }
   }
 };
