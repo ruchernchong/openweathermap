@@ -3,395 +3,1963 @@
 exports[`ForecastList should render 1`] = `
 <div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Sun Jun 28 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Sun) 28 Jun
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.7°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                27.7°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.7°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        27.7°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 66%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:01 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:13 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Mon Jun 29 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Mon) 29 Jun
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.0°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                27.1°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.0°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        27.1°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 71%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:02 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:14 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Tue Jun 30 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        moderate rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  moderate rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Tue) 30 Jun
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                29.8°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                27.0°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        29.8°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        27.0°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 69%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:02 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:14 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Wed Jul 01 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Wed) 01 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.0°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.8°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.0°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.8°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 66%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:02 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:14 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Thu Jul 02 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Thu) 02 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.0°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                27.2°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.0°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        27.2°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 66%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:02 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:14 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Fri Jul 03 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Fri) 03 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                29.9°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.9°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        29.9°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.9°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 72%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:02 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:14 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Sat Jul 04 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        moderate rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  moderate rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Sat) 04 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                29.9°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                27.1°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        29.9°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        27.1°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 67%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:03 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:14 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Sun Jul 05 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        moderate rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  moderate rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Sun) 05 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.3°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.9°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.3°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.9°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 62%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:03 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:15 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Mon Jul 06 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Mon) 06 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.2°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.8°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.2°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.8°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 61%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:03 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:15 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Tue Jul 07 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/04d@2x.png"
-      />
-      <div>
-        Description: 
-        broken clouds
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-04d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/04d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  broken clouds
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Tue) 07 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.4°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.9°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.4°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.9°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 61%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:03 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:15 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Wed Jul 08 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Wed) 08 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.8°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                27.2°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.8°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        27.2°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 59%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:03 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:15 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Thu Jul 09 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        light rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  light rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Thu) 09 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                29.8°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.9°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        29.8°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.9°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 67%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:03 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:15 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Fri Jul 10 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        moderate rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  moderate rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Fri) 10 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                30.0°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.9°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        30.0°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.9°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 63%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:04 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:15 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
   <div
-    style="margin-bottom: 64px;"
+    class="MuiPaper-root MuiAccordion-root MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <div>
-      <h4>
-        Sat Jul 11 2020 13:00:00 GMT+0800 (Singapore Standard Time)
-      </h4>
-      <img
-        alt=""
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-      />
-      <div>
-        Description: 
-        heavy intensity rain
+    <div
+      aria-disabled="false"
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-1 MuiAvatar-circle"
+                >
+                  <img
+                    alt="icon-10d"
+                    class="MuiAvatar-img"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-2 MuiTypography-body1"
+                >
+                  heavy intensity rain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+            >
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                (Sat) 11 Jul
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                High: 
+                28.7°C
+              </div>
+              <div
+                class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+              >
+                Low: 
+                26.3°C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        High: 
-        28.7°C
+      <div
+        aria-disabled="false"
+        aria-hidden="true"
+        class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </div>
-      <div>
-        Low: 
-        26.3°C
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <div
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Humidity: 73%
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunrise: 
+                  7:04 AM
+                </div>
+                <div
+                  class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12"
+                >
+                  Sunset: 
+                  7:15 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button>
-        Click more...
-      </button>
     </div>
   </div>
 </div>

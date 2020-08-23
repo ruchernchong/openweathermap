@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render 1`] = `
+<div>
+  <footer
+    class="sc-AxjAm gWcbgK"
+  >
+    ©2020 Developed by Chong Ru Chern, v0.1.0
+  </footer>
+</div>
+`;

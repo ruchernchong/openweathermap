@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import Chart from "chart.js";
 
-const ChartComponent = ({ datasets, labels, title, type }) => {
+const WeatherChart = ({ datasets, labels, title, type }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const ChartComponent = ({ datasets, labels, title, type }) => {
               let description = "";
 
               tooltipItems.forEach(({ datasetIndex, index }) => {
-                description = data.datasets[datasetIndex].description[index];
+                description = data.datasets[datasetIndex]?.description[index];
               });
 
               return description;
@@ -37,33 +37,25 @@ const ChartComponent = ({ datasets, labels, title, type }) => {
     });
   }, [chartRef, datasets, labels, title, type]);
 
-  return (
-    <div style={{ width: `100%`, height: `100%` }}>
-      <canvas ref={chartRef} />
-    </div>
-  );
+  return <canvas ref={chartRef} />;
 };
 
-ChartComponent.defaultProps = {
+WeatherChart.defaultProps = {
   type: "line"
 };
 
-ChartComponent.propTypes = {
+WeatherChart.propTypes = {
   /** The datasets for the chart */
-  datasets: PropTypes.array,
-  /** The height of the canvas */
-  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  datasets: PropTypes.array.isRequired,
   /** The X-Axis */
-  labels: PropTypes.array,
+  labels: PropTypes.array.isRequired,
   /** The title of the chart */
   title: PropTypes.shape({
     display: PropTypes.bool,
     text: PropTypes.string
   }),
   /** The type of chart - Available types are from Chart.js */
-  type: PropTypes.oneOf(["line", "bar", "radar", "pie", "bubble", "scatter"]),
-  /** The width of the canvas */
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  type: PropTypes.oneOf(["line", "bar", "radar", "pie", "bubble", "scatter"])
 };
 
-export default ChartComponent;
+export default WeatherChart;

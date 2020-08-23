@@ -1,15 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { format } from "date-fns";
+import { Box as MuiBox, Typography, withStyles } from "@material-ui/core";
 import { colours } from "../theme";
 
-import ChartComponent from "../components/ChartComponent";
+import WeatherChart from "../components/WeatherChart";
 import ForecastList from "../components/ForecastList";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
-import convertUnixToDatetime from "../helpers/convertUnixToDatetime";
+import { formatDate } from "../helpers/formatTimestamp";
+
+const Box = withStyles({
+  root: {
+    width: `100%`,
+    height: `100%`
+  }
+})(MuiBox);
 
 export const IndexPage = ({ data }) => {
   const { dataJson } = data;
@@ -21,10 +28,10 @@ export const IndexPage = ({ data }) => {
   // Truncate the data to the next 7 days of forecast
   const forecastDays = list.slice(0, 7);
 
-  const labels = forecastDays.map(({ dt }) =>
-    format(convertUnixToDatetime(dt), "(EEE) dd MMM")
-  );
+  // Flatten the array of objects to show only the dates
+  const labels = forecastDays.map(({ dt }) => formatDate(dt));
 
+  // Loop through each of the temperature ranges and store it in their respective datasets
   forecastDays.forEach(({ temp, weather }) => {
     // Select the first result of the array as the primary value according to OpenWeatherMap API Docs
     const description = weather[0].main;
@@ -68,9 +75,11 @@ export const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Weather in {city.name}</h1>
-      <div style={{ marginBottom: 64 }}>
-        <ChartComponent
+      <Typography align="center" component="h2" variant="h3" gutterBottom>
+        {city.name}
+      </Typography>
+      <Box marginBottom={8}>
+        <WeatherChart
           datasets={datasets}
           labels={labels}
           title={{
@@ -78,8 +87,10 @@ export const IndexPage = ({ data }) => {
             text: `Weather forecast in ${city.name}`
           }}
         />
-      </div>
-      <ForecastList list={list} />
+      </Box>
+      <Box marginBottom={8}>
+        <ForecastList list={list} />
+      </Box>
     </Layout>
   );
 };

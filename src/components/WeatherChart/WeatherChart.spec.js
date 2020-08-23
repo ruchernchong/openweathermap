@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ChartComponent from "./ChartComponent";
+import WeatherChart from "./WeatherChart";
 import { colours } from "../../theme";
 
 const mockLabels = [
@@ -54,10 +54,10 @@ const mockDatasets = [
   }
 ];
 
-describe("Chart", () => {
+describe("WeatherChart", () => {
   test("should render", () => {
     const { container } = render(
-      <ChartComponent
+      <WeatherChart
         datasets={mockDatasets}
         labels={mockLabels}
         title={{
