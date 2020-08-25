@@ -46,9 +46,9 @@ WeatherChart.defaultProps = {
 
 WeatherChart.propTypes = {
   /** The datasets for the chart */
-  datasets: PropTypes.array.isRequired,
+  datasets: PropTypes.array,
   /** The X-Axis */
-  labels: PropTypes.array.isRequired,
+  labels: PropTypes.array,
   /** The title of the chart */
   title: PropTypes.shape({
     display: PropTypes.bool,

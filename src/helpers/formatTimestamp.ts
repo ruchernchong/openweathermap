@@ -7,7 +7,7 @@ import { format, fromUnixTime } from "date-fns";
  * @returns
  */
 const formatDate = (timestamp: number): string =>
-  format(fromUnixTime(timestamp), "(EEE) dd MMM");
+  format(fromUnixTime(timestamp), "EEE, dd MMM");
 
 /**
  * Format the timestamp to time

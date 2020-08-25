@@ -57,7 +57,7 @@ exports[`WeatherCard should render 1`] = `
               <div
                 class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
               >
-                (Sun) 28 Jun
+                Sun, 28 Jun
               </div>
               <div
                 class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
