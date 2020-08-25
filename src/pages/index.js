@@ -20,7 +20,6 @@ import weatherActions from "../actions/weatherActions";
 
 import { formatDate } from "../helpers/formatTimestamp";
 import noop from "../helpers/noop";
-import formatTemperature from "../helpers/formatTemperature";
 
 const Box = withStyles({
   root: {
