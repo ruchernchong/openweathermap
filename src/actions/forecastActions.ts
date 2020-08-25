@@ -3,9 +3,9 @@ import { onecall } from "../api";
 import {
   ForecastActionTypes,
   ForecastOptions,
+  SET_FORECAST_ERROR,
   SET_FORECAST_LOADING,
-  SET_FORECAST_SUCCESS,
-  SET_FORECAST_ERROR
+  SET_FORECAST_SUCCESS
 } from "../types/forecast.types";
 
 export const setForecastLoading = (): ForecastActionTypes => ({

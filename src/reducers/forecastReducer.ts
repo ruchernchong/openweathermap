@@ -1,4 +1,10 @@
-import { ForecastActionTypes, ForecastState } from "../types/forecast.types";
+import {
+  ForecastActionTypes,
+  ForecastState,
+  SET_FORECAST_ERROR,
+  SET_FORECAST_LOADING,
+  SET_FORECAST_SUCCESS
+} from "../types/forecast.types";
 
 const initialState: ForecastState = {
   data: {},
@@ -11,16 +17,16 @@ const forecastReducer = (
   action: ForecastActionTypes
 ): ForecastState => {
   switch (action.type) {
-    case "SET_FORECAST_LOADING":
+    case SET_FORECAST_LOADING:
       return { ...state, error: false, loading: true };
-    case "SET_FORECAST_SUCCESS":
+    case SET_FORECAST_SUCCESS:
       return {
         ...state,
         data: action.payload,
         error: false,
         loading: false
       };
-    case "SET_FORECAST_ERROR":
+    case SET_FORECAST_ERROR:
       return {
         ...state,
         error: true,
