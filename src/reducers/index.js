@@ -1,6 +1,12 @@
 import { combineReducers } from "redux";
 
-const appReducer = combineReducers({});
+import forecast from "./forecastReducer";
+import weather from "./weatherReducer";
+
+const appReducer = combineReducers({
+  forecast,
+  weather
+});
 
 const rootReducer = (state, action) => appReducer(state, action);
 

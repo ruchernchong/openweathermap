@@ -36,7 +36,7 @@ describe("WeatherCard", () => {
 
     expect(queryAllByText(/Humidity/)[0]).not.toBeVisible();
 
-    fireEvent.click(getAllByText(/\(Sun\) 28 Jun/)[0]);
+    fireEvent.click(getAllByText(/Sun, 28 Jun/)[0]);
     expect(getAllByText(/Humidity/)[0]).toBeVisible();
   });
 });
