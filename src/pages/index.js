@@ -20,6 +20,7 @@ import weatherActions from "../actions/weatherActions";
 
 import { formatDate } from "../helpers/formatTimestamp";
 import noop from "../helpers/noop";
+import formatTemperature from "../helpers/formatTemperature";
 
 const Box = withStyles({
   root: {
@@ -88,7 +89,7 @@ export const IndexPage = ({
       ...datasetsOptions,
       backgroundColor: colours.cold,
       borderColor: colours.cold,
-      data: tempLow.map(({ temp }) => temp),
+      data: tempLow.map(({ temp }) => temp.toFixed(0)),
       description: tempLow.map(({ description }) => description),
       label: `Low (°C)`
     },
@@ -96,7 +97,7 @@ export const IndexPage = ({
       ...datasetsOptions,
       backgroundColor: colours.hot,
       borderColor: colours.hot,
-      data: tempHigh.map(({ temp }) => temp),
+      data: tempHigh.map(({ temp }) => temp.toFixed(0)),
       description: tempHigh.map(({ description }) => description),
       label: `High (°C)`
     }

@@ -63,13 +63,13 @@ exports[`WeatherCard should render 1`] = `
                 class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
               >
                 High: 
-                30.7°C
+                31°C
               </div>
               <div
                 class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
               >
                 Low: 
-                27.7°C
+                28°C
               </div>
             </div>
           </div>

@@ -66,13 +66,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.7°C
+                  31°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  27.7°C
+                  28°C
                 </div>
               </div>
             </div>
@@ -206,13 +206,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.0°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  27.1°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -346,13 +346,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  29.8°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  27.0°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -486,13 +486,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.0°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.8°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -626,13 +626,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.0°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  27.2°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -766,13 +766,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  29.9°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.9°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -906,13 +906,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  29.9°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  27.1°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -1046,13 +1046,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.3°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.9°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -1186,13 +1186,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.2°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.8°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -1326,13 +1326,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.4°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.9°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -1466,13 +1466,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.8°C
+                  31°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  27.2°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -1606,13 +1606,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  29.8°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.9°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -1746,13 +1746,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  30.0°C
+                  30°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.9°C
+                  27°C
                 </div>
               </div>
             </div>
@@ -1886,13 +1886,13 @@ exports[`ForecastList should render 1`] = `
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   High: 
-                  28.7°C
+                  29°C
                 </div>
                 <div
                   class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                 >
                   Low: 
-                  26.3°C
+                  26°C
                 </div>
               </div>
             </div>

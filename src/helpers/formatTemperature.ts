@@ -4,6 +4,6 @@
  * @param value - Value of the temperature
  * @returns
  */
-const formatTemperature = (value: number): string => `${value.toFixed(1)}°C`;
+const formatTemperature = (value: number): string => `${value.toFixed(0)}°C`;
 
 export default formatTemperature;
