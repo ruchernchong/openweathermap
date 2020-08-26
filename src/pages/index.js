@@ -1,7 +1,14 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Backdrop, Box, CircularProgress, Typography } from "@material-ui/core";
+import {
+  Backdrop,
+  Box,
+  CircularProgress,
+  Grid,
+  Switch,
+  Typography
+} from "@material-ui/core";
 import { colours } from "../theme";
 
 import WeatherChart from "../components/WeatherChart";
@@ -9,20 +16,28 @@ import ForecastList from "../components/ForecastList";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
+import chartActions from "../actions/chartActions";
 import forecastActions from "../actions/forecastActions";
 import weatherActions from "../actions/weatherActions";
 
-import { formatDate } from "../helpers/formatTimestamp";
+import { formatDate, formatTime } from "../helpers/formatTimestamp";
 import noop from "../helpers/noop";
 
 export const IndexPage = ({
   cityName,
   coord,
   daily = [],
+  datasets = [],
   forecast,
   getCurrentWeather = noop,
-  getForecast = noop
+  getForecast = noop,
+  hourly = [],
+  labels = [],
+  setDatasets = noop,
+  setLabels = noop
 }) => {
+  const [isDailyForecast, setIsDailyForecast] = useState(true);
+
   useEffect(() => {
     getCurrentWeather();
   }, [getCurrentWeather]);
@@ -37,55 +52,96 @@ export const IndexPage = ({
     }
   }, [coord, getForecast]);
 
-  const tempHigh = [],
-    tempLow = [];
+  const forecastDays = useMemo(() => daily.slice(0, 7), [daily]);
+  const forecastWithTempRange = useMemo(
+    () =>
+      forecastDays.map(({ dt, temp, weather }) => {
+        let { max, min } = temp;
+        max = max.toFixed();
+        min = min.toFixed();
+        // Select the first result of the array as the primary value according to OpenWeatherMap API Docs
+        const description = weather[0].description;
+        const formattedDateTime = formatDate(dt);
 
-  // Truncate the data to the next 7 days of forecast
-  const forecastDays = daily.slice(0, 7);
+        return { max, min, description, formattedDateTime };
+      }),
+    [forecastDays]
+  );
 
-  // Flatten the array of objects to show only the dates
-  const labels = forecastDays.map(({ dt }) => formatDate(dt));
+  useEffect(() => {
+    // Set the config for common datasets options
+    const datasetsOptions = {
+      fill: false,
+      pointBorderWidth: 3
+    };
 
-  // Loop through each of the temperature ranges and store it in their respective datasets
-  forecastDays.forEach(({ temp, weather }) => {
-    // Select the first result of the array as the primary value according to OpenWeatherMap API Docs
-    const description = weather[0].description;
+    const rangeHigh = forecastWithTempRange.map(({ max }) => max);
+    const rangeLow = forecastWithTempRange.map(({ min }) => min);
+    const dataDescription = forecastWithTempRange.map(
+      ({ description }) => description
+    );
+    // Flatten the array of objects to show only the dates as labels
+    const dataLabels = forecastWithTempRange.map(
+      ({ formattedDateTime }) => formattedDateTime
+    );
 
-    tempHigh.push({
-      temp: temp.max,
-      description
-    });
-    tempLow.push({
-      temp: temp.min,
-      description
-    });
-  });
+    const isChartDataReady =
+      rangeHigh.length > 0 &&
+      rangeLow.length > 0 &&
+      dataDescription.length > 0 &&
+      dataLabels.length > 0;
 
-  // Set the config for common datasets options
-  const datasetsOptions = {
-    fill: false,
-    pointBorderWidth: 5
-  };
-
-  // Set the config for each dataset options
-  const datasets = [
-    {
-      ...datasetsOptions,
-      backgroundColor: colours.cold,
-      borderColor: colours.cold,
-      data: tempLow.map(({ temp }) => temp.toFixed(0)),
-      description: tempLow.map(({ description }) => description),
-      label: `Low (°C)`
-    },
-    {
-      ...datasetsOptions,
-      backgroundColor: colours.hot,
-      borderColor: colours.hot,
-      data: tempHigh.map(({ temp }) => temp.toFixed(0)),
-      description: tempHigh.map(({ description }) => description),
-      label: `High (°C)`
+    if (isChartDataReady) {
+      if (isDailyForecast) {
+        setDatasets(
+          // Set the config for each dataset options
+          [
+            {
+              ...datasetsOptions,
+              backgroundColor: colours.hot,
+              borderColor: colours.hot,
+              data: rangeHigh,
+              description: dataDescription,
+              label: `High (°C)`
+            },
+            {
+              ...datasetsOptions,
+              backgroundColor: colours.cold,
+              borderColor: colours.cold,
+              data: rangeLow,
+              description: dataDescription,
+              label: `Low (°C)`
+            }
+          ]
+        );
+        setLabels(dataLabels);
+      } else {
+        setDatasets([
+          {
+            ...datasetsOptions,
+            backgroundColor: colours.black,
+            borderColor: colours.black,
+            data: hourly.map(({ temp }) => temp.toFixed(0)),
+            label: `Temp (°C)`
+          }
+        ]);
+        setLabels(
+          hourly.map(({ dt }) => [formatDate(dt), formatTime(dt)].join(" "))
+        );
+      }
     }
-  ];
+  }, [
+    forecastDays,
+    forecastWithTempRange,
+    hourly,
+    isDailyForecast,
+    setDatasets,
+    setLabels
+  ]);
+
+  const handleSwitchChange = e => {
+    setIsDailyForecast(e.target.checked);
+  };
 
   const loading = forecast.loading;
 
@@ -104,6 +160,7 @@ export const IndexPage = ({
           <Box marginBottom={8}>
             <WeatherChart
               datasets={datasets}
+              isDailyForecast={isDailyForecast}
               labels={labels}
               title={{
                 display: true,
@@ -111,8 +168,33 @@ export const IndexPage = ({
               }}
             />
           </Box>
+          {daily.length > 0 && hourly.length > 0 && (
+            <Box marginBottom={2}>
+              <Grid
+                component="label"
+                container
+                justify="center"
+                alignItems="center"
+              >
+                <Grid item>Hourly</Grid>
+                <Grid item>
+                  <Switch
+                    checked={isDailyForecast}
+                    onChange={handleSwitchChange}
+                    name="forecastType"
+                  />
+                </Grid>
+                <Grid item>Daily</Grid>
+              </Grid>
+            </Box>
+          )}
           <Box marginBottom={8}>
-            <ForecastList list={daily} data-testid="forecast-list" />
+            <ForecastList
+              daily={daily}
+              hourly={hourly}
+              isDailyForecast={isDailyForecast}
+              data-testid="forecast-list"
+            />
           </Box>
         </Fragment>
       )}
@@ -127,30 +209,39 @@ IndexPage.propTypes = {
     lon: PropTypes.number
   }),
   daily: PropTypes.array,
+  datasets: PropTypes.array,
   forecast: PropTypes.object,
-  getCurrentWeather: PropTypes.func
+  getCurrentWeather: PropTypes.func,
+  hourly: PropTypes.array,
+  labels: PropTypes.array
 };
 
 /* istanbul ignore next */
 const mapStateToProps = state => {
-  const { forecast, weather } = state;
+  const { chart, forecast, weather } = state;
 
   return {
     cityName: weather.data.name,
     coord: weather.data.coord,
     daily: forecast.data.daily,
-    forecast: forecast
+    datasets: chart.datasets,
+    forecast: forecast,
+    hourly: forecast.data.hourly,
+    labels: chart.labels
   };
 };
 
 /* istanbul ignore next */
 const mapDispatchToProps = dispatch => {
+  const { setDatasets, setLabels } = chartActions;
   const { getForecast } = forecastActions;
   const { getCurrentWeather } = weatherActions;
 
   return {
     getCurrentWeather: () => dispatch(getCurrentWeather()),
-    getForecast: options => dispatch(getForecast(options))
+    getForecast: options => dispatch(getForecast(options)),
+    setDatasets: datasets => dispatch(setDatasets(datasets)),
+    setLabels: labels => dispatch(setLabels(labels))
   };
 };
 

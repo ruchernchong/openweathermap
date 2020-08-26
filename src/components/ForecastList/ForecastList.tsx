@@ -1,8 +1,9 @@
 import * as React from "react";
 
 import WeatherCard from "../WeatherCard";
+import { useCallback } from "react";
 
-interface Temp {
+interface TempRange {
   day: number;
   min: number;
   max: number;
@@ -18,35 +19,62 @@ interface Weather {
   main: string;
 }
 
-interface List {
+interface Daily {
   dt: number;
   humidity: number;
   sunrise: number;
   sunset: number;
-  temp: Temp;
+  temp: TempRange;
+  weather: Weather[];
+}
+
+interface Hourly {
+  dt: number;
+  humidity: number;
+  temp: number;
   weather: Weather[];
 }
 
 interface Props {
-  list: List[];
+  daily: Daily[];
+  hourly: Hourly[];
+  isDailyForecast: boolean;
 }
 
-export const ForecastList: React.FC<Props> = ({ list }) => {
-  return (
-    <div data-testid="forecast-list">
-      {list.map(({ dt, humidity, sunrise, sunset, temp, weather }) => (
+export const ForecastList: React.FC<Props> = ({
+  daily,
+  hourly,
+  isDailyForecast
+}) => {
+  const renderForecast = useCallback(() => {
+    if (isDailyForecast) {
+      return daily.map(({ dt, humidity, sunrise, sunset, temp, weather }) => (
         <WeatherCard
           key={dt}
           dt={dt}
           humidity={humidity}
           sunrise={sunrise}
           sunset={sunset}
+          tempRange={temp}
+          weather={weather}
+          isDailyForecast={isDailyForecast}
+        />
+      ));
+    } else {
+      return hourly.map(({ dt, humidity, temp, weather }) => (
+        <WeatherCard
+          key={dt}
+          dt={dt}
+          humidity={humidity}
           temp={temp}
           weather={weather}
+          isDailyForecast={isDailyForecast}
         />
-      ))}
-    </div>
-  );
+      ));
+    }
+  }, [isDailyForecast]);
+
+  return <div data-testid="forecast-list">{renderForecast()}</div>;
 };
 
 export default ForecastList;

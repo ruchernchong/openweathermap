@@ -15,7 +15,7 @@ describe("WeatherCard", () => {
         humidity={humidity}
         sunrise={sunrise}
         sunset={sunset}
-        temp={temp}
+        tempRange={temp}
         weather={weather}
       />
     );
@@ -29,7 +29,7 @@ describe("WeatherCard", () => {
         humidity={humidity}
         sunrise={sunrise}
         sunset={sunset}
-        temp={temp}
+        tempRange={temp}
         weather={weather}
       />
     );

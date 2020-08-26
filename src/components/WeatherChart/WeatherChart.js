@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import Chart from "chart.js";
 
-const WeatherChart = ({ datasets, labels, title, type }) => {
+const WeatherChart = ({ datasets, isDailyForecast, labels, title, type }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
-    new Chart(chartRef?.current, {
+    const chartInstance = new Chart(chartRef?.current, {
       type,
       data: {
         labels,
@@ -24,7 +24,8 @@ const WeatherChart = ({ datasets, labels, title, type }) => {
               let description = "";
 
               tooltipItems.forEach(({ datasetIndex, index }) => {
-                description = data.datasets[datasetIndex]?.description[index];
+                description =
+                  data.datasets?.[datasetIndex]?.description?.[index];
               });
 
               return description;
@@ -35,7 +36,11 @@ const WeatherChart = ({ datasets, labels, title, type }) => {
         }
       }
     });
-  }, [chartRef, datasets, labels, title, type]);
+
+    return () => {
+      chartInstance.destroy();
+    };
+  }, [chartRef, datasets, isDailyForecast, labels, title, type]);
 
   return <canvas ref={chartRef} />;
 };
@@ -47,6 +52,8 @@ WeatherChart.defaultProps = {
 WeatherChart.propTypes = {
   /** The datasets for the chart */
   datasets: PropTypes.array,
+  /** The forecast type for the chart */
+  isDailyForecast: PropTypes.bool,
   /** The X-Axis */
   labels: PropTypes.array,
   /** The title of the chart */
