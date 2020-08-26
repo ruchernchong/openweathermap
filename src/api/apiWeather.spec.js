@@ -1,7 +1,9 @@
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
 
-import { setCurrentWeatherSuccess } from "../actions/weatherActions";
+import { setWeatherSuccess } from "../actions/weatherActions";
+
+import { SET_WEATHER_SUCCESS } from "../types/weather.types";
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -50,25 +52,21 @@ const mockResponse = {
   cod: 200
 };
 
-describe("onecall", () => {
+describe("apiWeather", () => {
   beforeEach(() => {
     fetch.resetMocks();
   });
 
   test("should call the api successfully", async () => {
     fetch.mockResponseOnce(mockResponse);
-
     const expectedActions = [
       {
         payload: mockResponse,
-        type: "SET_CURRENT_WEATHER_SUCCESS"
+        type: SET_WEATHER_SUCCESS
       }
     ];
-
     const store = mockStore({});
-
-    await store.dispatch(setCurrentWeatherSuccess(mockResponse));
-
+    await store.dispatch(setWeatherSuccess(mockResponse));
     expect(store.getActions()).toEqual(expectedActions);
   });
 });

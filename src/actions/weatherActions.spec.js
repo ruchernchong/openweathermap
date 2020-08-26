@@ -4,9 +4,9 @@ import thunk from "redux-thunk";
 import { getCurrentWeather } from "./weatherActions";
 
 import {
-  SET_CURRENT_WEATHER_ERROR,
-  SET_CURRENT_WEATHER_LOADING,
-  SET_CURRENT_WEATHER_SUCCESS
+  SET_WEATHER_ERROR,
+  SET_WEATHER_LOADING,
+  SET_WEATHER_SUCCESS
 } from "../types/weather.types";
 
 const middlewares = [thunk];
@@ -65,11 +65,11 @@ describe("weatherActions", () => {
     fetch.mockResponseOnce(JSON.stringify(mockResponse));
     const expectedActions = [
       {
-        type: SET_CURRENT_WEATHER_LOADING
+        type: SET_WEATHER_LOADING
       },
       {
         payload: mockResponse,
-        type: SET_CURRENT_WEATHER_SUCCESS
+        type: SET_WEATHER_SUCCESS
       }
     ];
     const store = mockStore({});
@@ -81,10 +81,10 @@ describe("weatherActions", () => {
     fetch.mockRejectOnce(new Error());
     const expectedActions = [
       {
-        type: SET_CURRENT_WEATHER_LOADING
+        type: SET_WEATHER_LOADING
       },
       {
-        type: SET_CURRENT_WEATHER_ERROR
+        type: SET_WEATHER_ERROR
       }
     ];
     const store = mockStore({});

@@ -1,31 +1,33 @@
-import { weather } from "../api";
+import apiWeather from "../api/apiWeather";
 
 import {
-  SET_CURRENT_WEATHER_ERROR,
-  SET_CURRENT_WEATHER_LOADING,
-  SET_CURRENT_WEATHER_SUCCESS
+  SET_WEATHER_ERROR,
+  SET_WEATHER_LOADING,
+  SET_WEATHER_SUCCESS,
+  Weather,
+  WeatherActionTypes
 } from "../types/weather.types";
 
-export const setCurrentWeatherLoading = () => ({
-  type: SET_CURRENT_WEATHER_LOADING
+export const setWeatherLoading = (): WeatherActionTypes => ({
+  type: SET_WEATHER_LOADING
 });
 
-export const setCurrentWeatherSuccess = data => ({
-  type: SET_CURRENT_WEATHER_SUCCESS,
+export const setWeatherSuccess = (data: Weather): WeatherActionTypes => ({
+  type: SET_WEATHER_SUCCESS,
   payload: data
 });
 
-export const setCurrentWeatherError = () => ({
-  type: SET_CURRENT_WEATHER_ERROR
+export const setWeatherError = (): WeatherActionTypes => ({
+  type: SET_WEATHER_ERROR
 });
 
 export const getCurrentWeather = () => {
   return dispatch => {
-    dispatch(setCurrentWeatherLoading());
+    dispatch(setWeatherLoading());
 
-    return weather()
-      .then(res => dispatch(setCurrentWeatherSuccess(res)))
-      .catch(() => dispatch(setCurrentWeatherError()));
+    return apiWeather()
+      .then(res => dispatch(setWeatherSuccess(res)))
+      .catch(() => dispatch(setWeatherError()));
   };
 };
 

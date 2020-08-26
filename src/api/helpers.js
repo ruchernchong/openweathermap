@@ -14,8 +14,6 @@ export const apiFetch = (url, params = {}) => {
     units: `metric`,
     appid: process.env.OPENWEATHERMAP_APPID
   };
-
   url += `?${queryString.stringify(params)}`;
-
   return fetch(url, params).then(res => res.json());
 };

@@ -4,7 +4,7 @@
     "lon": 103.85,
     "timezone": "Asia/Singapore",
     "timezone_offset": 28800,
-    "current": {
+    "data": {
       "dt": 1598335060,
       "sunrise": 1598310152,
       "sunset": 1598353875,

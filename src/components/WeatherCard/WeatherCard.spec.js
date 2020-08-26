@@ -2,9 +2,9 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import WeatherCard from "./WeatherCard";
 
-import mockData from "../../data/weather.json";
+import mockForecast from "../../../__mocks__/forecast.json";
 
-const mockListItem = mockData.list[0];
+const mockListItem = mockForecast.data.daily[0];
 const { dt, humidity, sunrise, sunset, temp, weather } = mockListItem;
 
 describe("WeatherCard", () => {
@@ -36,7 +36,7 @@ describe("WeatherCard", () => {
 
     expect(queryAllByText(/Humidity/)[0]).not.toBeVisible();
 
-    fireEvent.click(getAllByText(/Sun, 28 Jun/)[0]);
+    fireEvent.click(getAllByText(/Tue, 25 Aug/)[0]);
     expect(getAllByText(/Humidity/)[0]).toBeVisible();
   });
 });

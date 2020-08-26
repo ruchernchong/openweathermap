@@ -30,8 +30,7 @@ exports[`Page: Index should render 1`] = `
         Singapore
       </h2>
       <div
-        class="MuiBox-root MuiBox-root-2 Styled(MuiBox)-root-1"
-        classes="[object Object]"
+        class="MuiBox-root MuiBox-root-1"
       >
         <canvas
           class="chartjs-render-monitor"
@@ -41,8 +40,7 @@ exports[`Page: Index should render 1`] = `
         />
       </div>
       <div
-        class="MuiBox-root MuiBox-root-3 Styled(MuiBox)-root-1"
-        classes="[object Object]"
+        class="MuiBox-root MuiBox-root-2"
       >
         <div
           data-testid="forecast-list"
@@ -73,7 +71,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -86,7 +84,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           moderate rain
                         </p>
@@ -100,18 +98,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Tue, 25 Aug
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         29°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         28°C
@@ -164,18 +162,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 69%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:02 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:11 PM
@@ -213,7 +211,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -226,7 +224,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           light rain
                         </p>
@@ -240,18 +238,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Wed, 26 Aug
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         29°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         28°C
@@ -304,18 +302,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 69%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:02 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:10 PM
@@ -353,7 +351,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -366,7 +364,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           moderate rain
                         </p>
@@ -380,18 +378,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Thu, 27 Aug
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         30°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         28°C
@@ -444,18 +442,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 66%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:02 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:10 PM
@@ -493,7 +491,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -506,7 +504,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           heavy intensity rain
                         </p>
@@ -520,18 +518,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Fri, 28 Aug
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         29°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         28°C
@@ -584,18 +582,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 67%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:01 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:10 PM
@@ -633,7 +631,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -646,7 +644,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           light rain
                         </p>
@@ -660,18 +658,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Sat, 29 Aug
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         30°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         28°C
@@ -724,18 +722,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 68%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:01 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:09 PM
@@ -773,7 +771,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -786,7 +784,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           moderate rain
                         </p>
@@ -800,18 +798,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Sun, 30 Aug
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         30°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         28°C
@@ -864,18 +862,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 64%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:01 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:09 PM
@@ -913,7 +911,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -926,7 +924,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           moderate rain
                         </p>
@@ -940,18 +938,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Mon, 31 Aug
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         30°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         28°C
@@ -1004,18 +1002,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 65%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:01 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:09 PM
@@ -1053,7 +1051,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <div
-                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-4 MuiAvatar-circle"
+                          class="MuiAvatar-root WithStyles(ForwardRef(Avatar))-root-3 MuiAvatar-circle"
                         >
                           <img
                             alt="icon-10d"
@@ -1066,7 +1064,7 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-item"
                       >
                         <p
-                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-5 MuiTypography-body1"
+                          class="MuiTypography-root WithStyles(ForwardRef(Typography))-root-4 MuiTypography-body1"
                         >
                           moderate rain
                         </p>
@@ -1080,18 +1078,18 @@ exports[`Page: Index should render 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
                     >
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Tue, 01 Sep
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         High: 
                         29°C
                       </div>
                       <div
-                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
+                        class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-true"
                       >
                         Low: 
                         27°C
@@ -1144,18 +1142,18 @@ exports[`Page: Index should render 1`] = `
                         class="MuiGrid-root MuiGrid-container"
                       >
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Humidity: 66%
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunrise: 
                           7:00 AM
                         </div>
                         <div
-                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-6 MuiGrid-item MuiGrid-grid-xs-12"
+                          class="MuiGrid-root WithStyles(ForwardRef(Grid))-root-5 MuiGrid-item MuiGrid-grid-xs-12"
                         >
                           Sunset: 
                           7:08 PM

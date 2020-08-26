@@ -1,13 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import {
-  Backdrop,
-  Box as MuiBox,
-  CircularProgress,
-  Typography,
-  withStyles
-} from "@material-ui/core";
+import { Backdrop, Box, CircularProgress, Typography } from "@material-ui/core";
 import { colours } from "../theme";
 
 import WeatherChart from "../components/WeatherChart";
@@ -21,23 +15,14 @@ import weatherActions from "../actions/weatherActions";
 import { formatDate } from "../helpers/formatTimestamp";
 import noop from "../helpers/noop";
 
-const Box = withStyles({
-  root: {
-    width: `100%`,
-    height: `100%`
-  }
-})(MuiBox);
-
 export const IndexPage = ({
-  weatherObj,
+  cityName,
+  coord,
+  daily = [],
   forecast,
   getCurrentWeather = noop,
   getForecast = noop
 }) => {
-  const { current } = weatherObj;
-  const { coord, name } = current;
-  const { daily = [] } = forecast.data;
-
   useEffect(() => {
     getCurrentWeather();
   }, [getCurrentWeather]);
@@ -114,7 +99,7 @@ export const IndexPage = ({
       ) : (
         <Fragment>
           <Typography align="center" component="h2" variant="h3" gutterBottom>
-            {name}
+            {cityName}
           </Typography>
           <Box marginBottom={8}>
             <WeatherChart
@@ -122,7 +107,7 @@ export const IndexPage = ({
               labels={labels}
               title={{
                 display: true,
-                text: `Weather forecast in ${name}`
+                text: `Weather forecast in ${cityName}`
               }}
             />
           </Box>
@@ -136,7 +121,12 @@ export const IndexPage = ({
 };
 
 IndexPage.propTypes = {
-  weatherObj: PropTypes.object,
+  cityName: PropTypes.string,
+  coord: PropTypes.shape({
+    lat: PropTypes.number,
+    lon: PropTypes.number
+  }),
+  daily: PropTypes.array,
   forecast: PropTypes.object,
   getCurrentWeather: PropTypes.func
 };
@@ -146,8 +136,10 @@ const mapStateToProps = state => {
   const { forecast, weather } = state;
 
   return {
-    forecast: forecast,
-    weatherObj: weather
+    cityName: weather.data.name,
+    coord: weather.data.coord,
+    daily: forecast.data.daily,
+    forecast: forecast
   };
 };
 

@@ -4,7 +4,6 @@ import { IndexPage } from "./index";
 
 import { useStaticQuery } from "../../__mocks__/gatsby";
 
-import mockDataJson from "../../__mocks__/graph-data-json.json";
 import mockForecast from "../../__mocks__/forecast.json";
 import mockWeather from "../../__mocks__/weather.json";
 
@@ -16,11 +15,6 @@ const data = {
   }
 };
 
-const mockData = {
-  ...mockDataJson,
-  ...data
-};
-
 describe("Page: Index", () => {
   beforeEach(() => {
     useStaticQuery.mockImplementation(() => data);
@@ -29,9 +23,10 @@ describe("Page: Index", () => {
   test("should render", () => {
     const { container } = render(
       <IndexPage
-        data={mockData}
+        cityName={mockWeather.data.name}
+        coord={mockWeather.data.coord}
+        daily={mockForecast.data.daily}
         forecast={mockForecast}
-        weatherObj={mockWeather}
       />
     );
     expect(container).toMatchSnapshot();
@@ -40,9 +35,10 @@ describe("Page: Index", () => {
   test("should render the number of forecast days", () => {
     const { getByTestId } = render(
       <IndexPage
-        data={mockData}
+        cityName={mockWeather.data.name}
+        coord={mockWeather.data.coord}
+        daily={mockForecast.data.daily}
         forecast={mockForecast}
-        weatherObj={mockWeather}
       />
     );
     expect(getByTestId("forecast-list").children).toHaveLength(8);
@@ -54,9 +50,10 @@ describe("Page: Index", () => {
 
     const { getByTestId } = render(
       <IndexPage
-        data={mockData}
+        cityName={mockWeather.data.name}
+        coord={mockWeather.data.coord}
+        daily={mockForecast.data.daily}
         forecast={mockForecast}
-        weatherObj={mockWeather}
       />
     );
     expect(getByTestId("forecast-list").children).toHaveLength(0);
@@ -67,7 +64,12 @@ describe("Page: Index", () => {
     mockForecast.loading = true;
 
     const { getByTestId } = render(
-      <IndexPage forecast={mockForecast} weatherObj={mockWeather} />
+      <IndexPage
+        cityName={mockWeather.data.name}
+        coord={mockWeather.data.coord}
+        daily={mockForecast.data.daily}
+        forecast={mockForecast}
+      />
     );
     expect(getByTestId("loader")).toBeVisible();
   });
