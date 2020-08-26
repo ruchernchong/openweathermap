@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import {
   Accordion,
@@ -38,7 +38,16 @@ const WeatherIcon = withStyles({
   }
 })(Avatar);
 
-const WeatherCard = ({ dt, humidity, sunrise, sunset, temp, weather }) => {
+const WeatherCard = ({
+  dt,
+  humidity,
+  sunrise,
+  sunset,
+  temp,
+  tempRange,
+  weather,
+  isDailyForecast
+}) => {
   return (
     <Accordion>
       <AccordionSummary expandIcon={<ExpandMore />}>
@@ -61,14 +70,24 @@ const WeatherCard = ({ dt, humidity, sunrise, sunset, temp, weather }) => {
           <Grid item xs={12} md>
             <Grid container alignItems="center">
               <Info item xs={12} md>
-                {formatDate(dt)}
+                {isDailyForecast
+                  ? formatDate(dt)
+                  : [formatDate(dt), formatTime(dt)].join(" ")}
               </Info>
-              <Info item xs={12} md>
-                High: {formatTemperature(temp.max)}
-              </Info>
-              <Info item xs={12} md>
-                Low: {formatTemperature(temp.min)}
-              </Info>
+              {tempRange ? (
+                <Fragment>
+                  <Info item xs={12} md>
+                    High: {formatTemperature(tempRange.max)}
+                  </Info>
+                  <Info item xs={12} md>
+                    Low: {formatTemperature(tempRange.min)}
+                  </Info>
+                </Fragment>
+              ) : (
+                <Info item xs={12} md>
+                  Temp: {formatTemperature(temp)}
+                </Info>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -76,12 +95,16 @@ const WeatherCard = ({ dt, humidity, sunrise, sunset, temp, weather }) => {
       <AccordionDetails>
         <Grid container>
           <Info item xs={12}>{`Humidity: ${formatDecimal(humidity, 0)}%`}</Info>
-          <Info item xs={12}>
-            Sunrise: {formatTime(sunrise)}
-          </Info>
-          <Info item xs={12}>
-            Sunset: {formatTime(sunset)}
-          </Info>
+          {sunrise && sunset && (
+            <Fragment>
+              <Info item xs={12}>
+                Sunrise: {formatTime(sunrise)}
+              </Info>
+              <Info item xs={12}>
+                Sunset: {formatTime(sunset)}
+              </Info>
+            </Fragment>
+          )}
         </Grid>
       </AccordionDetails>
     </Accordion>
@@ -93,8 +116,10 @@ WeatherCard.propTypes = {
   humidity: PropTypes.number,
   sunrise: PropTypes.number,
   sunset: PropTypes.number,
-  temp: PropTypes.object,
-  weather: PropTypes.arrayOf(PropTypes.object)
+  temp: PropTypes.number,
+  tempRange: PropTypes.object,
+  weather: PropTypes.arrayOf(PropTypes.object),
+  isDailyForecast: PropTypes.bool
 };
 
 export default WeatherCard;

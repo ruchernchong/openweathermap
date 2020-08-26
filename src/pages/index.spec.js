@@ -6,6 +6,7 @@ import { useStaticQuery } from "../../__mocks__/gatsby";
 
 import mockForecast from "../../__mocks__/forecast.json";
 import mockWeather from "../../__mocks__/weather.json";
+import { fireEvent } from "@testing-library/dom";
 
 const data = {
   site: {
@@ -20,15 +21,30 @@ describe("Page: Index", () => {
     useStaticQuery.mockImplementation(() => data);
   });
 
-  test("should render", () => {
+  test("should render the daily forecast", () => {
     const { container } = render(
       <IndexPage
         cityName={mockWeather.data.name}
         coord={mockWeather.data.coord}
         daily={mockForecast.data.daily}
+        hourly={mockForecast.data.hourly}
         forecast={mockForecast}
       />
     );
+    expect(container).toMatchSnapshot();
+  });
+
+  test("should render the hourly forecast", () => {
+    const { container, getByText } = render(
+      <IndexPage
+        cityName={mockWeather.data.name}
+        coord={mockWeather.data.coord}
+        daily={mockForecast.data.daily}
+        forecast={mockForecast}
+        hourly={mockForecast.data.hourly}
+      />
+    );
+    fireEvent.click(getByText("Hourly"));
     expect(container).toMatchSnapshot();
   });
 
@@ -37,8 +53,8 @@ describe("Page: Index", () => {
       <IndexPage
         cityName={mockWeather.data.name}
         coord={mockWeather.data.coord}
-        daily={mockForecast.data.daily}
         forecast={mockForecast}
+        daily={mockForecast.data.daily}
       />
     );
     expect(getByTestId("forecast-list").children).toHaveLength(8);
