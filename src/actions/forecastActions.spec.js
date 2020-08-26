@@ -1,7 +1,13 @@
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
 
-import { setForecastSuccess } from "./forecastActions";
+import { getForecast } from "./forecastActions";
+
+import {
+  SET_FORECAST_ERROR,
+  SET_FORECAST_LOADING,
+  SET_FORECAST_SUCCESS
+} from "../types/forecast.types";
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -1401,20 +1407,36 @@ describe("forecastActions", () => {
     fetch.resetMocks();
   });
 
-  test("", async () => {
-    fetch.mockResponseOnce(mockResponse);
-
+  test("should call the api and return the response", async () => {
+    fetch.mockResponseOnce(JSON.stringify(mockResponse));
     const expectedActions = [
       {
+        type: SET_FORECAST_LOADING
+      },
+      {
         payload: mockResponse,
-        type: "SET_FORECAST_SUCCESS"
+        type: SET_FORECAST_SUCCESS
       }
     ];
-
     const store = mockStore({});
+    await store.dispatch(getForecast({ lat: 1.35, lon: 103.82 }));
+    expect(store.getActions()).toEqual(expectedActions);
+  });
 
-    await store.dispatch(setForecastSuccess(mockResponse));
-
+  test("should call the api and return api failure", async () => {
+    fetch.mockRejectOnce(new Error());
+    const expectedActions = [
+      {
+        type: SET_FORECAST_LOADING
+      },
+      {
+        type: SET_FORECAST_ERROR
+      }
+    ];
+    const store = mockStore({});
+    await store.dispatch(
+      getForecast({ lat: 1.35, lon: 103.82, exclude: ["minutely"] })
+    );
     expect(store.getActions()).toEqual(expectedActions);
   });
 });

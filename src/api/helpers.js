@@ -1,3 +1,5 @@
+import queryString from "query-string";
+
 export const baseUrl = `https://api.openweathermap.org/data/2.5`;
 
 /**
@@ -6,15 +8,14 @@ export const baseUrl = `https://api.openweathermap.org/data/2.5`;
  * @param {Object} [params]
  * @returns {Promise<T>}
  */
-export const apiFetch = async (url, params = {}) => {
-  const path = new URL(`${baseUrl.concat(url)}`);
-  path.search = new URLSearchParams({
+export const apiFetch = (url, params = {}) => {
+  params = {
     ...params,
     units: `metric`,
     appid: process.env.OPENWEATHERMAP_APPID
-  }).toString();
+  };
 
-  return fetch(path)
-    .then(res => res.json())
-    .catch(err => err);
+  url += `?${queryString.stringify(params)}`;
+
+  return fetch(url, params).then(res => res.json());
 };

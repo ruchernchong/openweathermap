@@ -1,9 +1,8 @@
-import { apiFetch } from "./helpers";
+import { apiFetch, baseUrl } from "./helpers";
 
-const weather = async () => {
-  return apiFetch(`/weather`, {
+const weather = () =>
+  apiFetch(`${baseUrl}/weather`, {
     q: `Singapore`
   }).then(res => res);
-};
 
 export default weather;
