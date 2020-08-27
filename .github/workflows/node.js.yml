@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      OPENWEATHERMAP_APPID: ${{ secrets.OPENWEATHERMAP_APPID }}
     strategy:
       matrix:
         node-version: [12.x]
