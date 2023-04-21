@@ -13,10 +13,13 @@ jobs:
       OPENWEATHERMAP_APPID: ${{ secrets.OPENWEATHERMAP_APPID }}
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
           node-version: latest
-          cache: "yarn"
-      - run: yarn install
-      - run: yarn test
-      - run: yarn build
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm test
+      - run: pnpm build
