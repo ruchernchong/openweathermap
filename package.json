@@ -2,7 +2,7 @@
   "name": "openweathermap",
   "private": true,
   "version": "0.1.0",
-  "author": "Chong Ru Chern <hello@ruchern.me>",
+  "author": "Ru Chern Chong<hello@ruchern.xyz>",
   "scripts": {
     "build": "gatsby build && tsc --emitDeclarationOnly",
     "build:clean": "gatsby clean && gatsby build",
