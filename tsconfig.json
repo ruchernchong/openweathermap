@@ -17,12 +17,8 @@
         "name": "typescript-styled-plugin"
       }
     ],
+    "skipLibCheck": true,
     "target": "es2015"
-  },
-  "typedocOptions": {
-    "mode": "modules",
-    "out": "docs",
-    "exclude": "**/*.js"
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["dist/*", "node_modules/*", "public/*"]
