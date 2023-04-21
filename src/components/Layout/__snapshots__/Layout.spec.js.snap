@@ -30,7 +30,7 @@ exports[`Layout should render 1`] = `
   <footer
     class="sc-AxjAm gWcbgK"
   >
-    ©2020 Developed by undefined, undefined
+    ©2023 Developed by undefined, undefined
   </footer>
 </div>
 `;

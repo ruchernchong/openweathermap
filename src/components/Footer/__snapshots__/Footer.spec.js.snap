@@ -5,7 +5,7 @@ exports[`Footer should render 1`] = `
   <footer
     class="sc-AxjAm gWcbgK"
   >
-    ©2020 Developed by John Doe, v1.0.0
+    ©2023 Developed by John Doe, v1.0.0
   </footer>
 </div>
 `;

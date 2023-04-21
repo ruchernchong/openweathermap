@@ -1223,7 +1223,7 @@ exports[`Page: Index should render the daily forecast 1`] = `
   <footer
     class="sc-AxjAm gWcbgK"
   >
-    ©2020 Developed by undefined, undefined
+    ©2023 Developed by undefined, undefined
   </footer>
 </div>
 `;
@@ -7187,7 +7187,7 @@ exports[`Page: Index should render the hourly forecast 1`] = `
   <footer
     class="sc-AxjAm gWcbgK"
   >
-    ©2020 Developed by undefined, undefined
+    ©2023 Developed by undefined, undefined
   </footer>
 </div>
 `;
