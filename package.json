@@ -70,7 +70,9 @@
     "typescript": "^5.0.4"
   },
   "resolutions": {
-    "ansi-regex": "^3.0.1"
+    "ansi-regex": "^3.0.1",
+    "engine.io": "^6.4.2",
+    "yaml": "^2.2.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
