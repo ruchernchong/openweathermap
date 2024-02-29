@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 import {
   Accordion,
   AccordionDetails,
@@ -11,13 +10,13 @@ import {
   withStyles
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
-
 import {
   formatDate,
   formatDecimal,
   formatTemperature,
   formatTime
 } from "../utils";
+import { TempRange, Weather } from "../types/forecast.types";
 
 const theme = createTheme();
 
@@ -41,6 +40,17 @@ const WeatherIcon = withStyles({
   }
 })(Avatar);
 
+interface WeatherCardProps {
+  dt: number;
+  humidity: number;
+  sunrise?: number;
+  sunset?: number;
+  temp?: number;
+  tempRange?: TempRange;
+  weather: Weather[];
+  isDailyForecast: boolean;
+}
+
 export const WeatherCard = ({
   dt,
   humidity,
@@ -50,7 +60,7 @@ export const WeatherCard = ({
   tempRange,
   weather,
   isDailyForecast
-}) => {
+}: WeatherCardProps) => {
   return (
     <Accordion>
       <AccordionSummary expandIcon={<ExpandMore />}>
@@ -112,15 +122,4 @@ export const WeatherCard = ({
       </AccordionDetails>
     </Accordion>
   );
-};
-
-WeatherCard.propTypes = {
-  dt: PropTypes.number,
-  humidity: PropTypes.number,
-  sunrise: PropTypes.number,
-  sunset: PropTypes.number,
-  temp: PropTypes.number,
-  tempRange: PropTypes.object,
-  weather: PropTypes.arrayOf(PropTypes.object),
-  isDailyForecast: PropTypes.bool
 };

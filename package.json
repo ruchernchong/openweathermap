@@ -49,9 +49,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "29.5.1",
-    "@types/node": "^14.6.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "@types/node": "^14.18.63",
+    "@types/react": "^18.2.60",
+    "@types/react-dom": "^18.2.19",
     "babel-jest": "^29.5.0",
     "babel-preset-gatsby": "^3.9.0",
     "husky": "^6.0.0",
@@ -66,7 +66,7 @@
     "react-test-renderer": "^18.2.0",
     "redux-mock-store": "1.5.4",
     "ts-jest": "29.1.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.3.3"
   },
   "resolutions": {
     "ansi-regex": "^3.0.1",

@@ -38,5 +38,3 @@ export const formatDate = (timestamp: number): string =>
  */
 export const formatTime = (timestamp: number): string =>
   format(fromUnixTime(timestamp), "h:mm a");
-
-export const noop = () => {};

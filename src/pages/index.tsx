@@ -1,5 +1,10 @@
-import React, { Fragment, useEffect, useMemo, useState } from "react";
-import PropTypes from "prop-types";
+import React, {
+  ChangeEvent,
+  Fragment,
+  useEffect,
+  useMemo,
+  useState
+} from "react";
 import { connect } from "react-redux";
 import {
   Backdrop,
@@ -17,39 +22,59 @@ import { SEO } from "../components/SEO";
 import chartActions from "../actions/chartActions";
 import forecastActions from "../actions/forecastActions";
 import weatherActions from "../actions/weatherActions";
-import { formatDate, formatTime, noop } from "../utils";
+import { formatDate, formatTime } from "../utils";
+import { ChartState } from "../types/chart.types";
+import {
+  Forecast,
+  ForecastOptions,
+  ForecastState
+} from "../types/forecast.types";
+import { WeatherState } from "../types/weather.types";
+
+interface IndexPageProps {
+  chart: ChartState;
+  forecast: ForecastState;
+  weather: WeatherState;
+  getCurrentWeather: () => void;
+  getForecast: (options: ForecastOptions) => Forecast;
+  setDatasets: <T extends object>(datasets: T[]) => void;
+  setLabels: (labels: string[]) => void;
+}
 
 export const IndexPage = ({
-  cityName,
-  coord,
-  daily = [],
-  datasets = [],
+  chart,
   forecast,
-  getCurrentWeather = noop,
-  getForecast = noop,
-  hourly = [],
-  labels = [],
-  setDatasets = noop,
-  setLabels = noop
-}) => {
-  const [isDailyForecast, setIsDailyForecast] = useState(true);
+  weather,
+  getCurrentWeather,
+  getForecast,
+  setDatasets,
+  setLabels
+}: IndexPageProps) => {
+  const { datasets, labels } = chart;
+  const daily = forecast.data?.daily;
+  const hourly = forecast.data?.hourly;
+  const cityName = weather.data?.cityName;
+  const coord = weather.data?.coord;
+  const [isDailyForecast, setIsDailyForecast] = useState<boolean>(true);
 
   useEffect(() => {
     getCurrentWeather();
-  }, []);
+  }, [getCurrentWeather]);
 
   useEffect(() => {
     if (coord) {
-      const { lat, lon } = coord;
-
-      getForecast({ lat, lon, exclude: ["minutely"] });
+      getForecast({
+        lat: coord.lat,
+        lon: coord.lon,
+        exclude: ["minutely"]
+      });
     }
   }, [coord]);
 
-  const forecastDays = useMemo(() => daily.slice(0, 7), [daily]);
+  const forecastDays = useMemo(() => daily?.slice(0, 7), [daily]);
   const forecastWithTempRange = useMemo(
     () =>
-      forecastDays.map(({ dt, temp, weather }) => ({
+      forecastDays?.map(({ dt, temp, weather }) => ({
         max: temp.max.toFixed(),
         min: temp.min.toFixed(),
         description: weather[0].description,
@@ -62,15 +87,22 @@ export const IndexPage = ({
     // Set the config for common datasets options
     const datasetsOptions = { fill: false, pointBorderWidth: 3 };
 
-    const rangeHigh = forecastWithTempRange.map(({ max }) => max);
-    const rangeLow = forecastWithTempRange.map(({ min }) => min);
-    const dataDescription = forecastWithTempRange.map(
-      ({ description }) => description
-    );
-    // Flatten the array of objects to show only the dates as labels
-    const dataLabels = forecastWithTempRange.map(
-      ({ formattedDateTime }) => formattedDateTime
-    );
+    let rangeHigh: string[] = [],
+      rangeLow: string[] = [],
+      dataDescription: string[] = [],
+      dataLabels: string[] = [];
+
+    if (forecastWithTempRange) {
+      rangeHigh = forecastWithTempRange.map(({ max }) => max);
+      rangeLow = forecastWithTempRange.map(({ min }) => min);
+      dataDescription = forecastWithTempRange.map(
+        ({ description }) => description
+      );
+      // Flatten the array of objects to show only the dates as labels
+      dataLabels = forecastWithTempRange.map(
+        ({ formattedDateTime }) => formattedDateTime
+      );
+    }
 
     const isChartDataReady =
       rangeHigh.length > 0 &&
@@ -126,7 +158,8 @@ export const IndexPage = ({
     setLabels
   ]);
 
-  const handleSwitchChange = e => setIsDailyForecast(e.target.checked);
+  const handleSwitchChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setIsDailyForecast(e.target.checked);
 
   const loading = forecast.loading;
 
@@ -153,7 +186,7 @@ export const IndexPage = ({
               }}
             />
           </Box>
-          {daily.length > 0 && hourly.length > 0 && (
+          {daily?.length > 0 && hourly.length > 0 && (
             <Box marginBottom={2}>
               <Grid
                 component="label"
@@ -173,42 +206,26 @@ export const IndexPage = ({
               </Grid>
             </Box>
           )}
-          <Box marginBottom={8}>
-            <ForecastList
-              daily={daily}
-              hourly={hourly}
-              isDailyForecast={isDailyForecast}
-              data-testid="forecast-list"
-            />
-          </Box>
+          {daily && (
+            <Box marginBottom={8}>
+              <ForecastList
+                daily={daily}
+                hourly={hourly}
+                isDailyForecast={isDailyForecast}
+                data-testid="forecast-list"
+              />
+            </Box>
+          )}
         </Fragment>
       )}
     </Layout>
   );
 };
 
-IndexPage.propTypes = {
-  cityName: PropTypes.string,
-  coord: PropTypes.shape({
-    lat: PropTypes.number,
-    lon: PropTypes.number
-  }),
-  daily: PropTypes.array,
-  datasets: PropTypes.array,
-  forecast: PropTypes.object,
-  getCurrentWeather: PropTypes.func,
-  hourly: PropTypes.array,
-  labels: PropTypes.array
-};
-
 const mapStateToProps = ({ chart, forecast, weather }) => ({
-  cityName: weather.data.name,
-  coord: weather.data.coord,
-  daily: forecast.data.daily,
-  datasets: chart.datasets,
-  forecast: forecast,
-  hourly: forecast.data.hourly,
-  labels: chart.labels
+  chart,
+  forecast,
+  weather
 });
 
 const mapDispatchToProps = dispatch => {
@@ -219,8 +236,9 @@ const mapDispatchToProps = dispatch => {
   return {
     getCurrentWeather: () => dispatch(getCurrentWeather()),
     getForecast: options => dispatch(getForecast(options)),
-    setDatasets: datasets => dispatch(setDatasets(datasets)),
-    setLabels: labels => dispatch(setLabels(labels))
+    setDatasets: <T extends object>(datasets: T[]) =>
+      dispatch(setDatasets(datasets)),
+    setLabels: (labels: string[]) => dispatch(setLabels(labels))
   };
 };
 

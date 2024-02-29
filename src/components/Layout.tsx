@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
+import React, { PropsWithChildren } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import "normalize.css";
 import { Container } from "@material-ui/core";
@@ -9,7 +8,9 @@ import { Header } from "./Header";
 
 import "./layout.css";
 
-export const Layout = ({ children }) => {
+interface LayoutProps extends PropsWithChildren {}
+
+export const Layout = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -21,16 +22,12 @@ export const Layout = ({ children }) => {
   `);
 
   return (
-    <Fragment>
+    <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Container fixed>
         <main>{children}</main>
       </Container>
       <Footer />
-    </Fragment>
+    </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
 };

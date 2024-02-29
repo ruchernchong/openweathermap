@@ -1,9 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { Container } from "@material-ui/core";
 
-export const Header = ({ siteTitle }) => (
+interface HeaderProps {
+  siteTitle: string;
+}
+
+export const Header = ({ siteTitle }: HeaderProps) => (
   <header style={{ marginBottom: "1.45rem" }}>
     <Container style={{ padding: "1.45rem" }}>
       <h1>
@@ -14,11 +17,3 @@ export const Header = ({ siteTitle }) => (
     </Container>
   </header>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string
-};
-
-Header.defaultProps = {
-  siteTitle: ``
-};

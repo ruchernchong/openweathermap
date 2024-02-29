@@ -1,10 +1,4 @@
-import {
-  formatDate,
-  formatDecimal,
-  formatTemperature,
-  formatTime,
-  noop
-} from "./";
+import { formatDate, formatDecimal, formatTemperature, formatTime } from "./";
 
 describe("formatDecimal", () => {
   test("should format to two decimal places if no decimal was passed", () => {
@@ -39,11 +33,5 @@ describe("formatTimestamp", () => {
 
   test("should return the time", () => {
     expect(formatTime(1598025600)).toBe("12:00 AM");
-  });
-});
-
-describe("noop", () => {
-  test("should return an empty function", () => {
-    expect(noop).toBeInstanceOf(Function);
   });
 });

@@ -3,13 +3,19 @@ export const SET_WEATHER_SUCCESS = "SET_WEATHER_SUCCESS";
 export const SET_WEATHER_ERROR = "SET_WEATHER_ERROR";
 
 export interface WeatherState {
-  data: object | Weather;
+  data: Weather | null;
   error: boolean;
   loading: boolean;
 }
 
+interface Coord {
+  lat: number;
+  lon: number;
+}
+
 export interface Weather {
-  coord: object;
+  cityName: string;
+  coord: Coord;
   weather: object[];
   base: string;
   main: object;

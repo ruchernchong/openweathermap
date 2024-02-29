@@ -1,8 +1,8 @@
-require("dotenv").config();
+import { GatsbyConfig } from "gatsby";
+import "dotenv/config";
+import { version } from "./package.json";
 
-const { version } = require("./package.json");
-
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     title: "OpenWeatherMap",
     description: "OpenWeatherMap app",
@@ -44,3 +44,5 @@ module.exports = {
     `gatsby-transformer-sharp`
   ]
 };
+
+export default config;

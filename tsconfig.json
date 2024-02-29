@@ -18,7 +18,8 @@
       }
     ],
     "skipLibCheck": true,
-    "target": "es2015"
+    "target": "es2015",
+    "resolveJsonModule": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["dist/*", "node_modules/*", "public/*"]
