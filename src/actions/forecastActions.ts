@@ -1,6 +1,7 @@
-import apiOnecall from "../api/apiOnecall";
+import { apiOnecall } from "../api/apiOnecall";
 
 import {
+  Forecast,
   ForecastActionTypes,
   ForecastOptions,
   SET_FORECAST_ERROR,
@@ -12,7 +13,7 @@ export const setForecastLoading = (): ForecastActionTypes => ({
   type: SET_FORECAST_LOADING
 });
 
-export const setForecastSuccess = (data: ForecastActionTypes) => ({
+export const setForecastSuccess = (data: Forecast): ForecastActionTypes => ({
   type: SET_FORECAST_SUCCESS,
   payload: data
 });

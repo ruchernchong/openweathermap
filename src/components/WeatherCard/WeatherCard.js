@@ -5,18 +5,21 @@ import {
   AccordionDetails,
   AccordionSummary,
   Avatar,
-  createMuiTheme,
+  createTheme,
   Grid,
   Typography,
   withStyles
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 
-import formatDecimal from "../../helpers/formatDecimal";
-import formatTemperature from "../../helpers/formatTemperature";
-import { formatDate, formatTime } from "../../helpers/formatTimestamp";
+import {
+  formatDate,
+  formatDecimal,
+  formatTemperature,
+  formatTime
+} from "../../utils";
 
-const theme = createMuiTheme();
+const theme = createTheme();
 
 const Description = withStyles({
   root: {

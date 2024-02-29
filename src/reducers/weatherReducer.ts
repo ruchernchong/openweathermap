@@ -12,7 +12,7 @@ const initialState: WeatherState = {
   loading: false
 };
 
-const weatherReducer = (
+export const weatherReducer = (
   state = initialState,
   action: WeatherActionTypes
 ): WeatherState => {
@@ -27,5 +27,3 @@ const weatherReducer = (
       return state;
   }
 };
-
-export default weatherReducer;

@@ -30,7 +30,7 @@ interface ForecastLoadingType {
 
 interface ForecastSuccessType {
   type: typeof SET_FORECAST_SUCCESS;
-  payload: Forecast;
+  payload: object;
 }
 
 interface ForecastErrorType {

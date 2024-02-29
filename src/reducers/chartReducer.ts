@@ -10,7 +10,7 @@ const initialState: ChartState = {
   labels: []
 };
 
-const chartReducer = (
+export const chartReducer = (
   state = initialState,
   action: ChartActionTypes
 ): ChartState => {
@@ -23,5 +23,3 @@ const chartReducer = (
       return state;
   }
 };
-
-export default chartReducer;

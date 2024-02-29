@@ -14,14 +14,13 @@ import { colours } from "../theme";
 import WeatherChart from "../components/WeatherChart";
 import ForecastList from "../components/ForecastList";
 import Layout from "../components/Layout";
-import Seo from "../components/Seo";
+import SEO from "../components/SEO";
 
 import chartActions from "../actions/chartActions";
 import forecastActions from "../actions/forecastActions";
 import weatherActions from "../actions/weatherActions";
 
-import { formatDate, formatTime } from "../helpers/formatTimestamp";
-import noop from "../helpers/noop";
+import { formatDate, formatTime, noop } from "../utils";
 
 export const IndexPage = ({
   cityName,
@@ -147,7 +146,7 @@ export const IndexPage = ({
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <SEO title="Home" />
       {loading ? (
         <Backdrop open={true} data-testid="loader">
           <CircularProgress />
@@ -170,12 +169,7 @@ export const IndexPage = ({
           </Box>
           {daily.length > 0 && hourly.length > 0 && (
             <Box marginBottom={2}>
-              <Grid
-                component="label"
-                container
-                justify="center"
-                alignItems="center"
-              >
+              <Grid component="label" container alignItems="center">
                 <Grid item>Hourly</Grid>
                 <Grid item>
                   <Switch
@@ -216,22 +210,16 @@ IndexPage.propTypes = {
   labels: PropTypes.array
 };
 
-/* istanbul ignore next */
-const mapStateToProps = state => {
-  const { chart, forecast, weather } = state;
+const mapStateToProps = ({ chart, forecast, weather }) => ({
+  cityName: weather.data.name,
+  coord: weather.data.coord,
+  daily: forecast.data.daily,
+  datasets: chart.datasets,
+  forecast: forecast,
+  hourly: forecast.data.hourly,
+  labels: chart.labels
+});
 
-  return {
-    cityName: weather.data.name,
-    coord: weather.data.coord,
-    daily: forecast.data.daily,
-    datasets: chart.datasets,
-    forecast: forecast,
-    hourly: forecast.data.hourly,
-    labels: chart.labels
-  };
-};
-
-/* istanbul ignore next */
 const mapDispatchToProps = dispatch => {
   const { setDatasets, setLabels } = chartActions;
   const { getForecast } = forecastActions;
