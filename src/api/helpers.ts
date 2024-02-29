@@ -7,7 +7,7 @@ export const apiFetch = <T extends Record<string, unknown>>(
   const queryParams = {
     ...params,
     units: "metric",
-    appid: process.env.OPENWEATHERMAP_APPID
+    appid: process.env.GATSBY_OPENWEATHERMAP_APPID
   };
 
   const queryUrl = `${url}?${queryString.stringify(queryParams)}`;
