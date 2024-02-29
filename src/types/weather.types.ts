@@ -3,7 +3,7 @@ export const SET_WEATHER_SUCCESS = "SET_WEATHER_SUCCESS";
 export const SET_WEATHER_ERROR = "SET_WEATHER_ERROR";
 
 export interface WeatherState {
-  data: object;
+  data: object | Weather;
   error: boolean;
   loading: boolean;
 }

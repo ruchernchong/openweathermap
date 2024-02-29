@@ -12,7 +12,7 @@ const initialState: ForecastState = {
   loading: false
 };
 
-const forecastReducer = (
+export const forecastReducer = (
   state = initialState,
   action: ForecastActionTypes
 ): ForecastState => {
@@ -36,5 +36,3 @@ const forecastReducer = (
       return state;
   }
 };
-
-export default forecastReducer;

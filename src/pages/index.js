@@ -210,22 +210,16 @@ IndexPage.propTypes = {
   labels: PropTypes.array
 };
 
-/* istanbul ignore next */
-const mapStateToProps = state => {
-  const { chart, forecast, weather } = state;
+const mapStateToProps = ({ chart, forecast, weather }) => ({
+  cityName: weather.data.name,
+  coord: weather.data.coord,
+  daily: forecast.data.daily,
+  datasets: chart.datasets,
+  forecast: forecast,
+  hourly: forecast.data.hourly,
+  labels: chart.labels
+});
 
-  return {
-    cityName: weather.data.name,
-    coord: weather.data.coord,
-    daily: forecast.data.daily,
-    datasets: chart.datasets,
-    forecast: forecast,
-    hourly: forecast.data.hourly,
-    labels: chart.labels
-  };
-};
-
-/* istanbul ignore next */
 const mapDispatchToProps = dispatch => {
   const { setDatasets, setLabels } = chartActions;
   const { getForecast } = forecastActions;
