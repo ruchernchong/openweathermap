@@ -29,7 +29,7 @@ dependencies:
     specifier: 8.2.0
     version: 8.2.0
   gatsby:
-    specifier: ^5.9.1
+    specifier: ^5.13.3
     version: 5.13.3(babel-eslint@10.1.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
   gatsby-plugin-image:
     specifier: ^3.9.0

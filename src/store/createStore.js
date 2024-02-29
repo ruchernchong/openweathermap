@@ -22,4 +22,4 @@ const store = createStore(
   compose(applyMiddleware(...middlewares))
 );
 
-export default () => store;
+export default store;
