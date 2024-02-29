@@ -1,12 +1,14 @@
-import { apiFetch, baseUrl } from "./helpers";
+import { apiFetch } from "./helpers";
+import { BASE_URL } from "../config";
+import { Forecast, ForecastOptions } from "../types/forecast.types";
 
-import { ForecastOptions } from "../types/forecast.types";
-
-const apiOnecall = async ({ lat, lon, exclude = [] }: ForecastOptions) =>
-  apiFetch(`${baseUrl}/onecall`, {
+export const apiOnecall = ({
+  lat,
+  lon,
+  exclude = []
+}: ForecastOptions): Promise<Forecast> =>
+  apiFetch(`${BASE_URL}/onecall`, {
     lat,
     lon,
     exclude
   });
-
-export default apiOnecall;

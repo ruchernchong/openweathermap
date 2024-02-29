@@ -1,6 +1,6 @@
-export const SET_FORECAST_LOADING = "SET_FORECAST_LOADING";
-export const SET_FORECAST_SUCCESS = "SET_FORECAST_SUCCESS";
-export const SET_FORECAST_ERROR = "SET_FORECAST_ERROR";
+export const SET_FORECAST_LOADING: string = "SET_FORECAST_LOADING";
+export const SET_FORECAST_SUCCESS: string = "SET_FORECAST_SUCCESS";
+export const SET_FORECAST_ERROR: string = "SET_FORECAST_ERROR";
 
 export interface ForecastState {
   data: object | Forecast;
