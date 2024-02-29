@@ -14,7 +14,7 @@ import { colours } from "../theme";
 import WeatherChart from "../components/WeatherChart";
 import ForecastList from "../components/ForecastList";
 import Layout from "../components/Layout";
-import Seo from "../components/Seo";
+import SEO from "../components/SEO";
 
 import chartActions from "../actions/chartActions";
 import forecastActions from "../actions/forecastActions";
@@ -146,7 +146,7 @@ export const IndexPage = ({
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <SEO title="Home" />
       {loading ? (
         <Backdrop open={true} data-testid="loader">
           <CircularProgress />
