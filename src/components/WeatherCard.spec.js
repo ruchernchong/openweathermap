@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import WeatherCard from "./WeatherCard";
 
-import mockForecast from "../../../__mocks__/forecast.json";
+import mockForecast from "../../__mocks__/forecast.json";
 
 const mockListItem = mockForecast.data.daily[0];
 const { dt, humidity, sunrise, sunset, temp, weather } = mockListItem;

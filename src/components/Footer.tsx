@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colours } from "../../theme";
+import { colours } from "../theme";
 import { graphql, useStaticQuery } from "gatsby";
 
 const StyledFooter = styled.footer`
@@ -11,7 +11,7 @@ const StyledFooter = styled.footer`
   box-shadow: 0 -5px 5px -5px ${colours.gray80};
 `;
 
-const Footer = () => {
+export const Footer = () => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -31,5 +31,3 @@ const Footer = () => {
     </StyledFooter>
   );
 };
-
-export default Footer;

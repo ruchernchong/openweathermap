@@ -1,7 +1,6 @@
 import * as React from "react";
-
-import WeatherCard from "../WeatherCard";
 import { useCallback } from "react";
+import WeatherCard from "./WeatherCard";
 
 interface TempRange {
   day: number;
@@ -76,5 +75,3 @@ export const ForecastList: React.FC<Props> = ({
 
   return <div data-testid="forecast-list">{renderForecast()}</div>;
 };
-
-export default ForecastList;

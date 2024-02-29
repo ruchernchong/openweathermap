@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Layout from "./Layout";
 
-import { useStaticQuery } from "../../../__mocks__/gatsby";
+import { useStaticQuery } from "../../__mocks__/gatsby";
 
 const data = {
   site: {

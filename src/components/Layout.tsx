@@ -4,12 +4,12 @@ import { graphql, useStaticQuery } from "gatsby";
 import "normalize.css";
 import { Container } from "@material-ui/core";
 
-import Footer from "../Footer";
-import Header from "../Header";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 import "./layout.css";
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -26,10 +26,7 @@ const Layout = ({ children }) => {
       <Container fixed>
         <main>{children}</main>
       </Container>
-      <Footer
-        author={data.site.siteMetadata.author}
-        version={data.site.siteMetadata.version}
-      />
+      <Footer />
     </Fragment>
   );
 };
@@ -37,5 +34,3 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired
 };
-
-export default Layout;
