@@ -1,15 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { colours } from "../theme";
 import { graphql, useStaticQuery } from "gatsby";
-
-const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 32px 0;
-  box-shadow: 0 -5px 5px -5px ${colours.gray80};
-`;
+import { Container } from "@material-ui/core";
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -23,11 +14,13 @@ export const Footer = () => {
     }
   `);
 
-  const { author, version } = data.site.siteMetadata;
+  const { author } = data.site.siteMetadata;
 
   return (
-    <StyledFooter>
-      {`©${new Date().getFullYear()} Developed by ${author}, ${version}`}
-    </StyledFooter>
+    <footer>
+      <Container style={{ padding: "1.45rem" }}>
+        &copy;{new Date().getFullYear()} Developed by {author}
+      </Container>
+    </footer>
   );
 };

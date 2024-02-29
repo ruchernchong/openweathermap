@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useCallback } from "react";
-import WeatherCard from "./WeatherCard";
+import { WeatherCard } from "./WeatherCard";
 
 interface TempRange {
   day: number;
