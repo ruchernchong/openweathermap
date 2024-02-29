@@ -20,8 +20,7 @@ import chartActions from "../actions/chartActions";
 import forecastActions from "../actions/forecastActions";
 import weatherActions from "../actions/weatherActions";
 
-import { formatDate, formatTime } from "../helpers/formatTimestamp";
-import noop from "../helpers/noop";
+import { formatDate, formatTime, noop } from "../utils";
 
 export const IndexPage = ({
   cityName,
