@@ -169,12 +169,7 @@ export const IndexPage = ({
           </Box>
           {daily.length > 0 && hourly.length > 0 && (
             <Box marginBottom={2}>
-              <Grid
-                component="label"
-                container
-                justify="center"
-                alignItems="center"
-              >
+              <Grid component="label" container alignItems="center">
                 <Grid item>Hourly</Grid>
                 <Grid item>
                   <Switch
