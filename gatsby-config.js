@@ -6,9 +6,9 @@ const { version } = require("./package.json");
 
 module.exports = {
   siteMetadata: {
-    title: `OpenWeatherMap`,
-    description: `OpenWeatherMap app for GovTech`,
-    author: `Chong Ru Chern`,
+    title: "OpenWeatherMap",
+    description: "OpenWeatherMap app",
+    author: "Chong Ru Chern",
     version: `v${version}`
   },
   plugins: [
