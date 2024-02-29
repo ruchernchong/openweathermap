@@ -5,7 +5,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Avatar,
-  createMuiTheme,
+  createTheme,
   Grid,
   Typography,
   withStyles
@@ -19,7 +19,7 @@ import {
   formatTime
 } from "../../utils";
 
-const theme = createMuiTheme();
+const theme = createTheme();
 
 const Description = withStyles({
   root: {
