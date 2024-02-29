@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Backdrop,
   Box,
@@ -10,69 +10,57 @@ import {
   Typography
 } from "@material-ui/core";
 import { colours } from "../theme";
-
-import WeatherChart from "../components/WeatherChart";
-import ForecastList from "../components/ForecastList";
+import { WeatherChart } from "../components/WeatherChart";
+import { ForecastList } from "../components/ForecastList";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
+import { setDatasets, setLabels } from "../actions/chartActions";
+import { getForecast } from "../actions/forecastActions";
+import { getCurrentWeather } from "../actions/weatherActions";
+import { formatDate, formatTime } from "../utils";
 
-import chartActions from "../actions/chartActions";
-import forecastActions from "../actions/forecastActions";
-import weatherActions from "../actions/weatherActions";
+export const IndexPage = () => {
+  const dispatch = useDispatch();
+  const { cityName, coord, daily, hourly, datasets, labels, loading } =
+    useSelector(state => ({
+      cityName: state.weather.data.name,
+      coord: state.weather.data.coord,
+      daily: state.forecast.data.daily,
+      hourly: state.forecast.data.hourly,
+      datasets: state.chart.datasets,
+      labels: state.chart.labels,
+      loading: state.forecast.loading
+    }));
 
-import { formatDate, formatTime, noop } from "../utils";
-
-export const IndexPage = ({
-  cityName,
-  coord,
-  daily = [],
-  datasets = [],
-  forecast,
-  getCurrentWeather = noop,
-  getForecast = noop,
-  hourly = [],
-  labels = [],
-  setDatasets = noop,
-  setLabels = noop
-}) => {
   const [isDailyForecast, setIsDailyForecast] = useState(true);
 
   useEffect(() => {
-    getCurrentWeather();
-  }, [getCurrentWeather]);
+    dispatch(getCurrentWeather());
+  }, [dispatch]);
 
   useEffect(() => {
     if (coord) {
       const { lat, lon } = coord;
 
-      const exclude = [`minutely`];
-
-      getForecast({ lat, lon, exclude });
+      getForecast({ lat, lon });
     }
-  }, [coord, getForecast]);
+  }, [coord, dispatch]);
 
   const forecastDays = useMemo(() => daily.slice(0, 7), [daily]);
   const forecastWithTempRange = useMemo(
     () =>
-      forecastDays.map(({ dt, temp, weather }) => {
-        let { max, min } = temp;
-        max = max.toFixed();
-        min = min.toFixed();
-        // Select the first result of the array as the primary value according to OpenWeatherMap API Docs
-        const description = weather[0].description;
-        const formattedDateTime = formatDate(dt);
-
-        return { max, min, description, formattedDateTime };
-      }),
+      forecastDays.map(({ dt, temp, weather }) => ({
+        max: temp.max.toFixed(),
+        min: temp.min.toFixed(),
+        description: weather[0].description,
+        formattedDateTime: formatDate(dt)
+      })),
     [forecastDays]
   );
 
   useEffect(() => {
     // Set the config for common datasets options
-    const datasetsOptions = {
-      fill: false,
-      pointBorderWidth: 3
-    };
+    const datasetsOptions = { fill: false, pointBorderWidth: 3 };
 
     const rangeHigh = forecastWithTempRange.map(({ max }) => max);
     const rangeLow = forecastWithTempRange.map(({ min }) => min);
@@ -92,57 +80,52 @@ export const IndexPage = ({
 
     if (isChartDataReady) {
       if (isDailyForecast) {
-        setDatasets(
-          // Set the config for each dataset options
-          [
-            {
-              ...datasetsOptions,
-              backgroundColor: colours.hot,
-              borderColor: colours.hot,
-              data: rangeHigh,
-              description: dataDescription,
-              label: `High (°C)`
-            },
-            {
-              ...datasetsOptions,
-              backgroundColor: colours.cold,
-              borderColor: colours.cold,
-              data: rangeLow,
-              description: dataDescription,
-              label: `Low (°C)`
-            }
-          ]
+        dispatch(
+          setDatasets(
+            // Set the config for each dataset options
+            [
+              {
+                ...datasetsOptions,
+                backgroundColor: colours.hot,
+                borderColor: colours.hot,
+                data: rangeHigh,
+                description: dataDescription,
+                label: `High (°C)`
+              },
+              {
+                ...datasetsOptions,
+                backgroundColor: colours.cold,
+                borderColor: colours.cold,
+                data: rangeLow,
+                description: dataDescription,
+                label: `Low (°C)`
+              }
+            ]
+          )
         );
-        setLabels(dataLabels);
+        dispatch(setLabels(dataLabels));
       } else {
-        setDatasets([
-          {
-            ...datasetsOptions,
-            backgroundColor: colours.black,
-            borderColor: colours.black,
-            data: hourly.map(({ temp }) => temp.toFixed(0)),
-            label: `Temp (°C)`
-          }
-        ]);
-        setLabels(
-          hourly.map(({ dt }) => [formatDate(dt), formatTime(dt)].join(" "))
+        dispatch(
+          setDatasets([
+            {
+              ...datasetsOptions,
+              backgroundColor: colours.black,
+              borderColor: colours.black,
+              data: hourly.map(({ temp }) => temp.toFixed(0)),
+              label: `Temp (°C)`
+            }
+          ])
+        );
+        dispatch(
+          setLabels(
+            hourly.map(({ dt }) => [formatDate(dt), formatTime(dt)].join(" "))
+          )
         );
       }
     }
-  }, [
-    forecastDays,
-    forecastWithTempRange,
-    hourly,
-    isDailyForecast,
-    setDatasets,
-    setLabels
-  ]);
+  }, [forecastDays, forecastWithTempRange, hourly, isDailyForecast, dispatch]);
 
-  const handleSwitchChange = e => {
-    setIsDailyForecast(e.target.checked);
-  };
-
-  const loading = forecast.loading;
+  const handleSwitchChange = e => setIsDailyForecast(e.target.checked);
 
   return (
     <Layout>
@@ -210,27 +193,4 @@ IndexPage.propTypes = {
   labels: PropTypes.array
 };
 
-const mapStateToProps = ({ chart, forecast, weather }) => ({
-  cityName: weather.data.name,
-  coord: weather.data.coord,
-  daily: forecast.data.daily,
-  datasets: chart.datasets,
-  forecast: forecast,
-  hourly: forecast.data.hourly,
-  labels: chart.labels
-});
-
-const mapDispatchToProps = dispatch => {
-  const { setDatasets, setLabels } = chartActions;
-  const { getForecast } = forecastActions;
-  const { getCurrentWeather } = weatherActions;
-
-  return {
-    getCurrentWeather: () => dispatch(getCurrentWeather()),
-    getForecast: options => dispatch(getForecast(options)),
-    setDatasets: datasets => dispatch(setDatasets(datasets)),
-    setLabels: labels => dispatch(setLabels(labels))
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);
+export default IndexPage;
