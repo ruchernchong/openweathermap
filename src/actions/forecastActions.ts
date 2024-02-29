@@ -1,4 +1,4 @@
-import { apiOnecall } from "../api/apiOnecall";
+import { apiForecast } from "../api/apiForecast";
 
 import {
   Forecast,
@@ -26,7 +26,7 @@ export const getForecast = (options: ForecastOptions) => {
   return dispatch => {
     dispatch(setForecastLoading());
 
-    return apiOnecall(options)
+    return apiForecast(options)
       .then(res => dispatch(setForecastSuccess(res)))
       .catch(() => dispatch(setForecastError()));
   };

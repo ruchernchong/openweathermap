@@ -1,4 +1,4 @@
-import apiWeather from "../api/apiWeather";
+import { apiWeather } from "../api/apiWeather";
 
 import {
   SET_WEATHER_ERROR,

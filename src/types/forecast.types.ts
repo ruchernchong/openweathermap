@@ -21,7 +21,6 @@ export interface Forecast {
 export interface ForecastOptions {
   lat: number;
   lon: number;
-  exclude?: string[];
 }
 
 interface ForecastLoadingType {
