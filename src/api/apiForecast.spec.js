@@ -1404,7 +1404,7 @@ const mockResponse = {
   ]
 };
 
-describe("apiOnecall", () => {
+describe("apiForecast", () => {
   beforeEach(() => {
     fetch.resetMocks();
   });

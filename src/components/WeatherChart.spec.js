@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import WeatherChart from "./WeatherChart";
-import { colours } from "../../theme";
+import { colours } from "../theme";
 
 const mockLabels = [
   "(Sun) 28 Jun",

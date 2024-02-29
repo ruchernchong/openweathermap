@@ -17,7 +17,7 @@ import {
   formatDecimal,
   formatTemperature,
   formatTime
-} from "../../utils";
+} from "../utils";
 
 const theme = createTheme();
 
@@ -41,7 +41,7 @@ const WeatherIcon = withStyles({
   }
 })(Avatar);
 
-const WeatherCard = ({
+export const WeatherCard = ({
   dt,
   humidity,
   sunrise,
@@ -54,9 +54,9 @@ const WeatherCard = ({
   return (
     <Accordion>
       <AccordionSummary expandIcon={<ExpandMore />}>
-        <Grid container justify="center" alignItems="center">
+        <Grid container alignItems="center">
           <Grid item xs={12} md={4}>
-            {weather.map(({ description, icon, id }, key) => (
+            {weather.map(({ description, icon }, key) => (
               <Grid key={key} container alignItems="center">
                 <Grid item>
                   <WeatherIcon
@@ -124,5 +124,3 @@ WeatherCard.propTypes = {
   weather: PropTypes.arrayOf(PropTypes.object),
   isDailyForecast: PropTypes.bool
 };
-
-export default WeatherCard;

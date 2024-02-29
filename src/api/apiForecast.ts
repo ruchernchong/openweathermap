@@ -2,13 +2,9 @@ import { apiFetch } from "./helpers";
 import { BASE_URL } from "../config";
 import { Forecast, ForecastOptions } from "../types/forecast.types";
 
-export const apiOnecall = ({
+export const apiForecast = ({
   lat,
   lon,
-  exclude = []
+  exclude
 }: ForecastOptions): Promise<Forecast> =>
-  apiFetch(`${BASE_URL}/onecall`, {
-    lat,
-    lon,
-    exclude
-  });
+  apiFetch(`${BASE_URL}/3.0/onecall`, { lat, lon, exclude }).then(res => res);

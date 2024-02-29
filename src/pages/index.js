@@ -10,16 +10,13 @@ import {
   Typography
 } from "@material-ui/core";
 import { colours } from "../theme";
-
-import WeatherChart from "../components/WeatherChart";
-import ForecastList from "../components/ForecastList";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-
+import { WeatherChart } from "../components/WeatherChart";
+import { ForecastList } from "../components/ForecastList";
+import { Layout } from "../components/Layout";
+import { SEO } from "../components/SEO";
 import chartActions from "../actions/chartActions";
 import forecastActions from "../actions/forecastActions";
 import weatherActions from "../actions/weatherActions";
-
 import { formatDate, formatTime, noop } from "../utils";
 
 export const IndexPage = ({
@@ -39,40 +36,31 @@ export const IndexPage = ({
 
   useEffect(() => {
     getCurrentWeather();
-  }, [getCurrentWeather]);
+  }, []);
 
   useEffect(() => {
     if (coord) {
       const { lat, lon } = coord;
 
-      const exclude = [`minutely`];
-
-      getForecast({ lat, lon, exclude });
+      getForecast({ lat, lon, exclude: ["minutely"] });
     }
-  }, [coord, getForecast]);
+  }, [coord]);
 
   const forecastDays = useMemo(() => daily.slice(0, 7), [daily]);
   const forecastWithTempRange = useMemo(
     () =>
-      forecastDays.map(({ dt, temp, weather }) => {
-        let { max, min } = temp;
-        max = max.toFixed();
-        min = min.toFixed();
-        // Select the first result of the array as the primary value according to OpenWeatherMap API Docs
-        const description = weather[0].description;
-        const formattedDateTime = formatDate(dt);
-
-        return { max, min, description, formattedDateTime };
-      }),
+      forecastDays.map(({ dt, temp, weather }) => ({
+        max: temp.max.toFixed(),
+        min: temp.min.toFixed(),
+        description: weather[0].description,
+        formattedDateTime: formatDate(dt)
+      })),
     [forecastDays]
   );
 
   useEffect(() => {
     // Set the config for common datasets options
-    const datasetsOptions = {
-      fill: false,
-      pointBorderWidth: 3
-    };
+    const datasetsOptions = { fill: false, pointBorderWidth: 3 };
 
     const rangeHigh = forecastWithTempRange.map(({ max }) => max);
     const rangeLow = forecastWithTempRange.map(({ min }) => min);
@@ -138,9 +126,7 @@ export const IndexPage = ({
     setLabels
   ]);
 
-  const handleSwitchChange = e => {
-    setIsDailyForecast(e.target.checked);
-  };
+  const handleSwitchChange = e => setIsDailyForecast(e.target.checked);
 
   const loading = forecast.loading;
 
@@ -169,7 +155,12 @@ export const IndexPage = ({
           </Box>
           {daily.length > 0 && hourly.length > 0 && (
             <Box marginBottom={2}>
-              <Grid component="label" container alignItems="center">
+              <Grid
+                component="label"
+                container
+                justifyContent="center"
+                alignItems="center"
+              >
                 <Grid item>Hourly</Grid>
                 <Grid item>
                   <Switch

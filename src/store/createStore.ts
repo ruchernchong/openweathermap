@@ -21,3 +21,5 @@ export const store = createStore(
   initialState,
   compose(applyMiddleware(...middlewares))
 );
+
+export default () => store;

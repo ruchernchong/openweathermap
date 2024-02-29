@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import ForecastList from "./ForecastList";
 
-import mockForecast from "../../../__mocks__/forecast.json";
+import mockForecast from "../../__mocks__/forecast.json";
 
 const { daily, hourly } = mockForecast.data;
 

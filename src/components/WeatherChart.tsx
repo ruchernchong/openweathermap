@@ -2,7 +2,13 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import Chart from "chart.js";
 
-const WeatherChart = ({ datasets, isDailyForecast, labels, title, type }) => {
+export const WeatherChart = ({
+  datasets,
+  isDailyForecast,
+  labels,
+  title,
+  type
+}) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -64,5 +70,3 @@ WeatherChart.propTypes = {
   /** The type of chart - Available types are from Chart.js */
   type: PropTypes.oneOf(["line", "bar", "radar", "pie", "bubble", "scatter"])
 };
-
-export default WeatherChart;

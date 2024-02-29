@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Footer from "./Footer";
 
-import { useStaticQuery } from "../../../__mocks__/gatsby";
+import { useStaticQuery } from "../../__mocks__/gatsby";
 
 const data = {
   site: {
